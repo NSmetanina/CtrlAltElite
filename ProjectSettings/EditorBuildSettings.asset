@@ -8,6 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Slide_Blockout.unity
+    guid: 0b0587b18f9e7c54a89470a03f39c088
+  - enabled: 1
+    path: Assets/Scenes/Main_Scene_Blockout.unity
+    guid: e535ff6542ca3f2409ec01181bc1e637
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
