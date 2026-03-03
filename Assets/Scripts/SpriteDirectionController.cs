@@ -88,9 +88,9 @@ public class SpriteDirectionController : MonoBehaviour
         {
             spriteRenderer.sprite = StickmanSpriteSheet_Back;
         }
-        else if ((activeKey == KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow)))
+        else if ((activeKey == KeyCode.A) || (Input.GetKeyDown(KeyCode.LeftArrow))) //had to swap left and right because of the isometric camera changing the players view
         {
-            spriteRenderer.sprite = StickmanSpriteSheet_Left;
+            spriteRenderer.sprite = StickmanSpriteSheet_Right;      
         }
         else if ((activeKey == KeyCode.S) || (Input.GetKeyDown(KeyCode.RightArrow)))
         {
@@ -98,7 +98,7 @@ public class SpriteDirectionController : MonoBehaviour
         }
         else if ((activeKey == KeyCode.D) || (Input.GetKeyDown(KeyCode.UpArrow)))
         {
-            spriteRenderer.sprite = StickmanSpriteSheet_Right;
+            spriteRenderer.sprite = StickmanSpriteSheet_Left;
         }
     }
 

@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
 
     void Movement()     //change position based on direction from read input * set movement speed * fixed Deltatime ( so movement is consistent )
     {
-        transform.position += direction * speed * Time.deltaTime;
+        transform.position += (direction*(-1)) * speed * Time.deltaTime; // Direction is minus 1 because of the camera
     }
 
     void Jump()
