@@ -4,11 +4,10 @@ public class SpriteDirectionController : MonoBehaviour
 {
     //On player input change to the correct sprite
 
-    Direction firstPressed;
     KeyCode activeKey = KeyCode.None;
     KeyCode lastActiveKey = KeyCode.None;
     SpriteRenderer spriteRenderer;
-    [SerializeField] Sprite StickmanSpriteSheet_Foward; //so i can put the right sprites in the varaibles
+    [SerializeField] Sprite StickmanSpriteSheet_Foward; //so I can put the right sprites in the variables
     [SerializeField] Sprite StickmanSpriteSheet_Right;
     [SerializeField] Sprite StickmanSpriteSheet_Left;
     [SerializeField] Sprite StickmanSpriteSheet_Back;
@@ -40,7 +39,7 @@ public class SpriteDirectionController : MonoBehaviour
 
     void GetInitialKeyCode()
     {
-        if ((Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.DownArrow)))
+        if ((Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.UpArrow)))
         {
             activeKey = KeyCode.W;
         }   //Set active key to up
@@ -48,11 +47,11 @@ public class SpriteDirectionController : MonoBehaviour
         {
             activeKey = KeyCode.A;
         }   //Set active key to left
-        else if ((Input.GetKeyDown(KeyCode.S)) || (Input.GetKeyDown(KeyCode.RightArrow)))
+        else if ((Input.GetKeyDown(KeyCode.S)) || (Input.GetKeyDown(KeyCode.DownArrow)))
         {
             activeKey = KeyCode.S;
         }   //Set active key to down
-        else if ((Input.GetKeyDown(KeyCode.D)) || (Input.GetKeyDown(KeyCode.UpArrow)))
+        else if ((Input.GetKeyDown(KeyCode.D)) || (Input.GetKeyDown(KeyCode.RightArrow)))
         {
             activeKey = KeyCode.D;
         }   //Set active key to right
@@ -60,7 +59,7 @@ public class SpriteDirectionController : MonoBehaviour
 
     void GetNewKeyCode()
     {
-        if ((Input.GetKey(KeyCode.W)) || (Input.GetKeyDown(KeyCode.DownArrow))) 
+        if ((Input.GetKey(KeyCode.W)) || (Input.GetKeyDown(KeyCode.UpArrow))) 
         {
             activeKey = KeyCode.W;
         }   //Set active key to up
@@ -68,11 +67,11 @@ public class SpriteDirectionController : MonoBehaviour
         {
             activeKey = KeyCode.A;
         }   //Set active key to left
-        else if ((Input.GetKey(KeyCode.S)) || (Input.GetKeyDown(KeyCode.RightArrow)))
+        else if ((Input.GetKey(KeyCode.S)) || (Input.GetKeyDown(KeyCode.DownArrow)))
         {
             activeKey = KeyCode.S;
         }   //Set active key to down
-        else if ((Input.GetKey(KeyCode.D)) || (Input.GetKeyDown(KeyCode.UpArrow)))
+        else if ((Input.GetKey(KeyCode.D)) || (Input.GetKeyDown(KeyCode.RightArrow)))
         {
             activeKey = KeyCode.D;
         }   //Set active key to right
@@ -101,6 +100,4 @@ public class SpriteDirectionController : MonoBehaviour
             spriteRenderer.sprite = StickmanSpriteSheet_Left;
         }
     }
-
-    enum Direction { Empty, Up, Down, Left, Right };
 }
