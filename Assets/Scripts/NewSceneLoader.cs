@@ -6,8 +6,8 @@ public class NewSceneLoader : MonoBehaviour
 {
     public Collider Cube;
 
-    private void OnTriggerEnter(Collider Cube)
+    private void OnTriggerEnter(Collider Cube)  // when an object touches the object with the script
         {
-             SceneManager.LoadScene("Main_Scene_Blockout", LoadSceneMode.Single);
+             SceneManager.LoadScene("Main_Scene_Blockout", LoadSceneMode.Single);   //load the new scene
         }
 }

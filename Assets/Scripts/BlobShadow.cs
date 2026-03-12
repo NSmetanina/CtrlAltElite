@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlobShadow : MonoBehaviour
+        //This script was made from this tutorial "How To Make A Blob Shadow In Unity" on youtube https://youtu.be/ZGFdfrjyI5U?si=TDS05f06gSv4NBAS 
+
+public class BlobShadow : MonoBehaviour     
 {
     public GameObject shadow;
     public RaycastHit hit;
@@ -20,7 +22,8 @@ public class BlobShadow : MonoBehaviour
         //Cast a ray straight downwards, reads back where it lands (this is optional but reccomended)
         if(Physics.Raycast(downRay, out hit))
         {
-            print(hit.transform);
+            print(hit.transform);   
         }
     }
 }
+

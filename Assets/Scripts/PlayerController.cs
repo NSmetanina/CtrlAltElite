@@ -13,11 +13,14 @@ public class PlayerController : MonoBehaviour
     // float YSpeed; XSpeed are called later
     public Rigidbody rb;
 
-        void OnCollisionStay(Collision colisionVariable) // need to put a variable here or this wont work
+        void OnCollisionStay(Collision collisionVariable) // need to put a variable here or this wont work
         {
-            IsGrounded = true;
+            if  (collisionVariable.gameObject.tag == "Ground")  //grounds have the ground tag only this way you can only jump the the thing you are coliding wiht has the ground tag
+                {
+                IsGrounded = true;
+                }
         }
-        void OnCollisionExit(Collision colisionVariable)
+        void OnCollisionExit(Collision collisionVariable)
         {
             IsGrounded = false;
         }
