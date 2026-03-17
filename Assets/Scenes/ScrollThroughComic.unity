@@ -480,6 +480,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   YSpeed: 1
   WaitTime: 3
+  EndPoint: 0
 --- !u!1 &2049336310
 GameObject:
   m_ObjectHideFlags: 0
