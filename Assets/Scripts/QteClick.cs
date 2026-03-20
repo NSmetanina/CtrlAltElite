@@ -1,49 +1,66 @@
+using NUnit.Framework;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using TMPro;
 
 public class QteClick : MonoBehaviour
 {
-   public Animator fadeAnimation;
-   public Animator zAnimation;
-   public float timer;
+    public GameObject guideObject;
+   public Animator guideAnimation;
+    public TextMeshProUGUI zText;
+   private float timer = 1f;
 
+   private bool isActive = false;
+
+   void OnEnable()
+    {
+        isActive = true;
+        zText.color = Color.black;
+        guideAnimation.SetBool("StartQte", true);
+    }
 
     void Update()
     {
+        if(!isActive) 
+        return;
         timer -= Time.deltaTime;
-        if(Input.anyKeyDown && timer > 0)
-        {
+        
             
-            if (Input.GetKey(KeyCode.Z))
-            {             
-                zAnimation.SetBool("IsClicked", true); 
-                fadeAnimation.SetBool("StartQte", false);
-                Debug.Log("QTE successed");
-            }
-            else
-            {
-                // qteSucessed = false;
-                zAnimation.SetBool("failed", true);  
-                fadeAnimation.SetBool("StartQte", false);
-                Debug.Log("QTE failed(input)");
-            }
+        if (Input.GetKey(KeyCode.Z))
+        {             
+            EndQTE(true);
         }
-        if (timer <= 0)
+        else if(Input.anyKeyDown)
         {
-            timer = 0;
-            zAnimation.SetBool("failed", true); 
-            fadeAnimation.SetBool("StartQte", false);
-            // fadeAnimation.D;
+            EndQTE(false);
+        }
+        
+        else if (timer <= 0)
+        {
+            // EndQTE(false);
+            // guideObject.SetActive(true);
+            isActive = false;
             Debug.Log("QTE failed");
         }
-            
-
     }
-    
 
-    void OnEnable()
+    void EndQTE(bool wasSuccessful)
     {
-        timer = 1.30f;
+        isActive = false;
+        
+        if (wasSuccessful)
+        {
+            zText.color = Color.green;
+            guideObject.SetActive(false);
+            Debug.Log("QTE successed");
+        }
+        else
+        {
+            zText.color = Color.red;
+            guideObject.SetActive(false);
+            Debug.Log("QTE failed");
+        }
+        
     }
 
 }
