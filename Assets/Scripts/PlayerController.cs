@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
         void OnCollisionStay(Collision collisionVariable) // need to put a variable here or this wont work
         {
-            if  (collisionVariable.gameObject.tag == "Ground")  //grounds have the ground tag only this way you can only jump the the thing you are coliding wiht has the ground tag
+            if (collisionVariable.gameObject.tag.Contains("Ground"))  //grounds have the ground tag only this way you can only jump the the thing you are coliding wiht has the ground tag
                 {
                 IsGrounded = true;
                 }
