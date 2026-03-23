@@ -2397,7 +2397,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1947772682}
   - component: {fileID: 1947772683}
-  - component: {fileID: 1947772684}
   - component: {fileID: 1947772685}
   m_Layer: 0
   m_Name: Hack UI
@@ -2439,24 +2438,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947772681}
   m_CullTransparentMesh: 1
---- !u!114 &1947772684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947772681}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6db77a34fa3a95346903a780eee3655d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 5
-  texts:
-  - {fileID: 1121484848}
-  - {fileID: 865220285}
-  - {fileID: 1647203275}
-  - {fileID: 137714001}
 --- !u!114 &1947772685
 MonoBehaviour:
   m_ObjectHideFlags: 0
