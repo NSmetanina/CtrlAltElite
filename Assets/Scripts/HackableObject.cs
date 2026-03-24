@@ -6,28 +6,26 @@ public class HackableObject : MonoBehaviour
 {   
 
     public ElevatorMovement elevatorMovement;
+    
+    public Animator elevator;
 
-    public void FunctionToCall()
+    public void HackBehaviour()
     {
-        if (gameObject.tag.Contains("Elevator")) 
+        if (gameObject.tag == "ElevatorGround") 
             {
                 Debug.Log("Function from ScriptA is called, I'm " + gameObject.name); 
                  
-                if (elevatorMovement.ElevatorYPosition == elevatorMovement.BottomStopPoint)
+                if ( transform.position.y == 2.21f)
                 {
-                    Debug.Log("Elevator is moving up"); 
-                    elevatorMovement.MoveUp();
+                    elevator.SetBool("Trigger", true);
                 }
-                else if (elevatorMovement.ElevatorYPosition == elevatorMovement.TopStopPoint)
+                else if ( transform.position.y == 0f)
                 {
-                    Debug.Log("Elevator is moving down");
-                    elevatorMovement.MoveDown(); 
+                    elevator.SetBool("Trigger", true);
                 }
                 else 
-                {
-                    Debug.Log("Elevator was moving so cant run another move script"); 
-                }
-            }
+                return;
     
+        }
     }
 }

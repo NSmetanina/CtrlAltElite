@@ -1,7 +1,7 @@
 using UnityEngine;
 
     //is called when other script calls this script
-
+    //Based of tutorial video https://youtu.be/ly9mK0TGJJo?si=QwI64tHTRKeiEYR8 
 public class ElevatorMovement : MonoBehaviour
 {
 
