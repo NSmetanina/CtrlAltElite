@@ -8,6 +8,9 @@ public class NewSceneLoader : MonoBehaviour
 
     private void OnTriggerEnter(Collider Cube)  // when an object touches the object with the script
         {
+            // if (collisionVariable.gameObject.tag.Contains("Ground"))
+            // {
              SceneManager.LoadScene("Main_Scene_Blockout", LoadSceneMode.Single);   //load the new scene
+            // }
         }
 }
