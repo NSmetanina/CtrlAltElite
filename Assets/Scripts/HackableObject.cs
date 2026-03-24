@@ -17,11 +17,13 @@ public class HackableObject : MonoBehaviour
                  
                 if ( transform.position.y == 2.21f)
                 {
-                    elevator.SetBool("Trigger", true);
+                    elevator.SetBool("DownTrigger", true);
+                    elevator.ResetTrigger("UpTrigger");
                 }
                 else if ( transform.position.y == 0f)
                 {
-                    elevator.SetBool("Trigger", true);
+                    elevator.SetBool("UpTrigger", true);
+                    elevator.ResetTrigger("DownTrigger");
                 }
                 else 
                 return;

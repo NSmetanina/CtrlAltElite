@@ -17,11 +17,11 @@ public class TriggerToHack : MonoBehaviour
     {
         hackable = true;
         collision.transform.SetParent(transform);
-        collision.transform.SetParent(null);
     }
      public void OnTriggerExit(Collider collision) 
     {
         hackable = false;
+        collision.transform.SetParent(null);
     }
 
     void Update()
