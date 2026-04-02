@@ -15,17 +15,20 @@ public class HackableObject : MonoBehaviour
             {
                 Debug.Log("Function from ScriptA is called, I'm " + gameObject.name); 
                  
-                if ( transform.position.y == 2.21f)
+                if ( transform.position.z >= 0.94f)
                 {
+                        Debug.Log("Hello"); 
                     elevator.SetBool("DownTrigger", true);
                     elevator.ResetTrigger("UpTrigger");
                 }
-                else if ( transform.position.y == 0f)
+                else if ( transform.position.z <= -0.88f)
                 {
+                        Debug.Log("Hello2"); 
                     elevator.SetBool("UpTrigger", true);
                     elevator.ResetTrigger("DownTrigger");
                 }
                 else 
+                Debug.Log("Hello3"); 
                 return;
     
         }
