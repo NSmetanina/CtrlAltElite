@@ -12,8 +12,20 @@ EditorBuildSettings:
     path: Assets/Scenes/Slide_Blockout.unity
     guid: 0b0587b18f9e7c54a89470a03f39c088
   - enabled: 1
+    path: Assets/Max Scenes/SewerScene.unity
+    guid: ef249ae7529dad849ae984a8ae9f27b5
+  - enabled: 1
+    path: Assets/Max Scenes/MainScene.unity
+    guid: dcd78841497aa6d4a908c6816c34fb49
+  - enabled: 1
     path: Assets/Max Scenes/Blockout.unity
     guid: 61d09021cb9c54c448df0e0985d21e1d
+  - enabled: 1
+    path: Assets/Max Scenes/ScrollThroughComic.unity
+    guid: b704778ebd44aba4f8847d5d8683f4d7
+  - enabled: 1
+    path: Assets/Max Scenes/Gym.unity
+    guid: 32af2d923088618479cc4c346d537a0f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

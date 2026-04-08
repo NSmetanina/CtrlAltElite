@@ -10,7 +10,7 @@ public class NewSceneLoader : MonoBehaviour
         {
             // if (collisionVariable.gameObject.tag.Contains("Ground"))
             // {
-             SceneManager.LoadScene("Blockout", LoadSceneMode.Single);   //load the new scene
+             SceneManager.LoadScene("MainScene", LoadSceneMode.Single);   //load the new scene
             // }
         }
 }
