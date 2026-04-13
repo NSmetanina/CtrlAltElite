@@ -37,7 +37,7 @@ public class TriggerToHack : MonoBehaviour
                 if (hasBeenHacked == false)
                 {
                     hasBeenHacked = true;
-                    Debug.Log("Run Minigame"); 
+                    Debug.Log("Run Minigame"); //also use this space to/for sprite directrion somehow
                     Debug.Log("call script on object that is getting hacked");
                     hackableObject.HackBehaviour();
                 }

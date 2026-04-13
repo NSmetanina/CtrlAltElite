@@ -59,19 +59,19 @@ public class SpriteDirectionController : MonoBehaviour
 
     void GetNewKeyCode()
     {
-        if ((Input.GetKey(KeyCode.W)) || (Input.GetKeyDown(KeyCode.UpArrow))) 
+        if ((Input.GetKeyDown(KeyCode.W)) || (Input.GetKeyDown(KeyCode.UpArrow))) 
         {
             activeKey = KeyCode.W;
         }   //Set active key to up
-        else if ((Input.GetKey(KeyCode.A)) || (Input.GetKeyDown(KeyCode.LeftArrow)))
+        else if ((Input.GetKeyDown(KeyCode.A)) || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
             activeKey = KeyCode.A;
         }   //Set active key to left
-        else if ((Input.GetKey(KeyCode.S)) || (Input.GetKeyDown(KeyCode.DownArrow)))
+        else if ((Input.GetKeyDown(KeyCode.S)) || (Input.GetKeyDown(KeyCode.DownArrow)))
         {
             activeKey = KeyCode.S;
         }   //Set active key to down
-        else if ((Input.GetKey(KeyCode.D)) || (Input.GetKeyDown(KeyCode.RightArrow)))
+        else if ((Input.GetKeyDown(KeyCode.D)) || (Input.GetKeyDown(KeyCode.RightArrow)))
         {
             activeKey = KeyCode.D;
         }   //Set active key to right
