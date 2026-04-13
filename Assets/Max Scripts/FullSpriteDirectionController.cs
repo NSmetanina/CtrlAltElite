@@ -7,7 +7,9 @@ public class FullSpriteDirectionController : MonoBehaviour
     private Animator animator;  //so i can set triggers
 
     KeyCode activeKey = KeyCode.None;
-    KeyCode lastActiveKey = KeyCode.None;
+    KeyCode FacingDirection = KeyCode.None;
+
+    [SerializeField] GameObject HackUi;
 
     [SerializeField] Sprite SpritePrototype_Forward; //assigning standing sprites so I can put the right sprites in the variables
     [SerializeField] Sprite SpritePrototype_Right;
@@ -45,10 +47,13 @@ public class FullSpriteDirectionController : MonoBehaviour
 
     void Update()   
     {
-        lastActiveKey = activeKey;
+        if (activeKey != KeyCode.None)
+        {
+            FacingDirection = activeKey;
+        }
         GetNewKeyCode(); // The player gets a new activeKey here or sets the activeKey to none
         UpdateSprite(); //using activeKey this will display the correct animation and disable others
-                        //using lastActiveKey this will
+                        //using FacingDirection this will
     }
 
     void GetNewKeyCode()
@@ -130,7 +135,7 @@ public class FullSpriteDirectionController : MonoBehaviour
                 animator.SetBool("IsMovingRight", false);
                 
                 animator.SetBool("Idle", true);
-                if(false) //you are running the minigame
+                if(HackUi.activeSelf) //if you are running the minigame (active self checks if the game object itself is active)
                 {
                     HackSprites();
                 }
@@ -142,38 +147,55 @@ public class FullSpriteDirectionController : MonoBehaviour
     }
 
 
-    void HackSprites() //fix soon
+    void HackSprites() 
     {
-                animator.SetBool("IsMovingForward", false); 
-                animator.SetBool("IsMovingLeft", false); 
-                animator.SetBool("IsMovingBack", false);
-                animator.SetBool("IsMovingRight", false);
-                
-                animator.SetBool("Idle", true);
-                //Debug.Log("Works");
+        animator.enabled = false; //since i am setting sprites in sprite renderer manually i need animator to stop being in control of sprite renderer
+        Debug.Log("FacingDirection is " + FacingDirection);
+        if(FacingDirection == KeyCode.W)
+        { 
+            spriteRenderer.sprite = SpritePrototype_HackingForward;
+            Debug.Log("Hack Forward");
+        }
+        else if(FacingDirection == KeyCode.A)
+        { 
+            spriteRenderer.sprite = SpritePrototype_HackingLeft;
+            Debug.Log("Hack Left");
+        }
+        else if(FacingDirection == KeyCode.S)
+        {
+             spriteRenderer.sprite = SpritePrototype_HackingBack;
+             Debug.Log("Hack Back");
+        }
+        else if(FacingDirection == KeyCode.D)
+        { 
+            spriteRenderer.sprite = SpritePrototype_HackingRight;
+            Debug.Log("Hack Right");
+        }
+         else 
+         { Debug.Log("hack Didnt work");}
 
     }   //used because you are now hacking
 
     void SetIdleSprite()
     {
         animator.enabled = false; //since i am setting sprites in sprite renderer manually i need animator to stop being in control of sprite renderer
-        //Debug.Log("last active key is " + lastActiveKey);
-        if(lastActiveKey == KeyCode.W)
+        //Debug.Log("FacingDirectiony is " + FacingDirection);
+        if(FacingDirection == KeyCode.W)
         { 
             spriteRenderer.sprite = SpritePrototype_Forward;
             //Debug.Log("Idle Forward");
         }
-        else if(lastActiveKey == KeyCode.A)
+        else if(FacingDirection == KeyCode.A)
         { 
             spriteRenderer.sprite = SpritePrototype_Left;
             //Debug.Log("Idle Left");
         }
-        else if(lastActiveKey == KeyCode.S)
+        else if(FacingDirection == KeyCode.S)
         {
              spriteRenderer.sprite = SpritePrototype_Back;
              //Debug.Log("Idle Back");
         }
-        else if(lastActiveKey == KeyCode.D)
+        else if(FacingDirection == KeyCode.D)
         { 
             spriteRenderer.sprite = SpritePrototype_Right;
             //Debug.Log("Idle Right");
