@@ -11,31 +11,31 @@ public class FullSpriteDirectionController : MonoBehaviour
 
     [SerializeField] GameObject HackUi;
 
-    [SerializeField] Sprite SpritePrototype_Forward; //assigning standing sprites so I can put the right sprites in the variables
-    [SerializeField] Sprite SpritePrototype_Right;
-    [SerializeField] Sprite SpritePrototype_Left;
-    [SerializeField] Sprite SpritePrototype_Back;
+    [SerializeField] Sprite Sprite_Forward; //assigning standing sprites so I can put the right sprites in the variables
+    [SerializeField] Sprite Sprite_Right;
+    [SerializeField] Sprite Sprite_Left;
+    [SerializeField] Sprite Sprite_Back;
 
-    [SerializeField] Sprite SpritePrototype_HackingForward; //assigning hacking sprites
-    [SerializeField] Sprite SpritePrototype_HackingRight;
-    [SerializeField] Sprite SpritePrototype_HackingLeft;
-    [SerializeField] Sprite SpritePrototype_HackingBack;
+    [SerializeField] Sprite Sprite_HackingForward; //assigning hacking sprites
+    [SerializeField] Sprite Sprite_HackingRight;
+    [SerializeField] Sprite Sprite_HackingLeft;
+    [SerializeField] Sprite Sprite_HackingBack;
 
-    [SerializeField] Sprite SpritePrototype_WalkingFoward1; //assigning Walking foward sprites
-    [SerializeField] Sprite SpritePrototype_WalkingFoward2;
-    [SerializeField] Sprite SpritePrototype_WalkingFoward3;
+    // [SerializeField] Sprite Sprite_WalkingFoward1; //assigning Walking foward sprites
+    // [SerializeField] Sprite Sprite_WalkingFoward2;
+    // [SerializeField] Sprite Sprite_WalkingFoward3;
 
-    [SerializeField] Sprite SpritePrototype_WalkingRight1; //assigning Walking right sprites
-    [SerializeField] Sprite SpritePrototype_WalkingRight2;
-    [SerializeField] Sprite SpritePrototype_WalkingRight3;
+    // [SerializeField] Sprite SpritePrototype_WalkingRight1; //assigning Walking right sprites
+    // [SerializeField] Sprite SpritePrototype_WalkingRight2;
+    // [SerializeField] Sprite SpritePrototype_WalkingRight3;
     
-    [SerializeField] Sprite SpritePrototype_WalkingLeft1; //assigning Walking left sprites
-    [SerializeField] Sprite SpritePrototype_WalkingLeft2;
-    [SerializeField] Sprite SpritePrototype_WalkingLeft3;
+    // [SerializeField] Sprite SpritePrototype_WalkingLeft1; //assigning Walking left sprites
+    // [SerializeField] Sprite SpritePrototype_WalkingLeft2;
+    // [SerializeField] Sprite SpritePrototype_WalkingLeft3;
 
-    [SerializeField] Sprite SpritePrototype_WalkingBack1; //assigning Walking back sprites
-    [SerializeField] Sprite SpritePrototype_WalkingBack2;
-    [SerializeField] Sprite SpritePrototype_WalkingBack3;
+    // [SerializeField] Sprite SpritePrototype_WalkingBack1; //assigning Walking back sprites
+    // [SerializeField] Sprite SpritePrototype_WalkingBack2;
+    // [SerializeField] Sprite SpritePrototype_WalkingBack3;
     
     private void Awake()
     {
@@ -153,22 +153,22 @@ public class FullSpriteDirectionController : MonoBehaviour
         Debug.Log("FacingDirection is " + FacingDirection);
         if(FacingDirection == KeyCode.W)
         { 
-            spriteRenderer.sprite = SpritePrototype_HackingForward;
+            spriteRenderer.sprite = Sprite_HackingForward;
             Debug.Log("Hack Forward");
         }
         else if(FacingDirection == KeyCode.A)
         { 
-            spriteRenderer.sprite = SpritePrototype_HackingLeft;
+            spriteRenderer.sprite = Sprite_HackingLeft;
             Debug.Log("Hack Left");
         }
         else if(FacingDirection == KeyCode.S)
         {
-             spriteRenderer.sprite = SpritePrototype_HackingBack;
+             spriteRenderer.sprite = Sprite_HackingBack;
              Debug.Log("Hack Back");
         }
         else if(FacingDirection == KeyCode.D)
         { 
-            spriteRenderer.sprite = SpritePrototype_HackingRight;
+            spriteRenderer.sprite = Sprite_HackingRight;
             Debug.Log("Hack Right");
         }
          else 
@@ -182,22 +182,22 @@ public class FullSpriteDirectionController : MonoBehaviour
         //Debug.Log("FacingDirectiony is " + FacingDirection);
         if(FacingDirection == KeyCode.W)
         { 
-            spriteRenderer.sprite = SpritePrototype_Forward;
+            spriteRenderer.sprite = Sprite_Forward;
             //Debug.Log("Idle Forward");
         }
         else if(FacingDirection == KeyCode.A)
         { 
-            spriteRenderer.sprite = SpritePrototype_Left;
+            spriteRenderer.sprite = Sprite_Left;
             //Debug.Log("Idle Left");
         }
         else if(FacingDirection == KeyCode.S)
         {
-             spriteRenderer.sprite = SpritePrototype_Back;
+             spriteRenderer.sprite = Sprite_Back;
              //Debug.Log("Idle Back");
         }
         else if(FacingDirection == KeyCode.D)
         { 
-            spriteRenderer.sprite = SpritePrototype_Right;
+            spriteRenderer.sprite = Sprite_Right;
             //Debug.Log("Idle Right");
         }
         // else 

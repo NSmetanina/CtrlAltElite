@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5638d53b6f4c5e446b0cce0cdfe41e48
+guid: cf6bea40f13985d4089e06f9c2edd772
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1000
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,132 +93,49 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: StickmanSpriteSheet_Foward
+      name: walk4BR_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 0
-        width: 462
-        height: 1000
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 357
+        y: 54
+        width: 407
+        height: 917
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5febf129e386d9545ac25bebb720826a
-      internalID: 259363093
+      spriteID: 1c2f5dcb579817f47874b59f4f286d18
+      internalID: 830977703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: StickmanSpriteSheet_Left
+      name: walk4BR_2
       rect:
         serializedVersion: 2
-        x: 462
-        y: 0
-        width: 462
-        height: 1000
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
+        x: 534
+        y: 50
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6869d1409925c84f91c20f86540b506
-      internalID: -1723392693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StickmanSpriteSheet_Back
-      rect:
-        serializedVersion: 2
-        x: 950
-        y: 0
-        width: 462
-        height: 1000
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c7901234d0d9394db27196b2436afba
-      internalID: 78355131
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: StickmanSpriteSheet_Right
-      rect:
-        serializedVersion: 2
-        x: 1386
-        y: 0
-        width: 462
-        height: 1000
-      alignment: 9
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ba865fd6631ab34c802f078e17ca4bc
-      internalID: 845947953
+      spriteID: 7bfb1f56bed471b43a654e34273925d4
+      internalID: 2037361109
       vertices: []
       indices: 
       edges: []
@@ -227,7 +144,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6836aab4e6e520b4a83d31f54d719fa9
+    spriteID: 61a09c3cb3c938241bbac66af5f604b0
     internalID: 0
     vertices: []
     indices: 
@@ -237,10 +154,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      StickmanSpriteSheet_Back: 78355131
-      StickmanSpriteSheet_Foward: 259363093
-      StickmanSpriteSheet_Left: -1723392693
-      StickmanSpriteSheet_Right: 845947953
+      walk4BR_0: 830977703
+      walk4BR_1: -326870442
+      walk4BR_2: 2037361109
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1753,7 +1753,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1610145421, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
+  m_Sprite: {fileID: 894216249, guid: 1fbf63c64aa7d3a4c88a1c000c0b169a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1820,26 +1820,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd97e5def79f145bb0360c493b8a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpritePrototype_Forward: {fileID: -120309113, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_Right: {fileID: -1610145421, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_Left: {fileID: 650949793, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_Back: {fileID: 598076084, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_HackingForward: {fileID: 82196117, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_HackingRight: {fileID: 757248351, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_HackingLeft: {fileID: -194011694, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_HackingBack: {fileID: -1825678456, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingFoward1: {fileID: 555437295, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingFoward2: {fileID: 862480545, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingFoward3: {fileID: 1396526663, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingRight1: {fileID: 276486760, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingRight2: {fileID: -1663147003, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingRight3: {fileID: 1939903964, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingLeft1: {fileID: 1507702198, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingLeft2: {fileID: 1700698726, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingLeft3: {fileID: 2025563769, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingBack1: {fileID: -1838963459, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingBack2: {fileID: -738354867, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
-  SpritePrototype_WalkingBack3: {fileID: 470087545, guid: 998f7fff16279ef418e61440364f7d5d, type: 3}
+  HackUi: {fileID: 1587383964}
+  Sprite_Forward: {fileID: 1815935596, guid: a5bf7c54b6716124dab5efeb14856a40, type: 3}
+  Sprite_Right: {fileID: 394672385, guid: f40bec43b9c74bc44993868c157ac7b9, type: 3}
+  Sprite_Left: {fileID: -1208733515, guid: e23a9f4e18d01634ebfe339853c934b2, type: 3}
+  Sprite_Back: {fileID: 894216249, guid: 1fbf63c64aa7d3a4c88a1c000c0b169a, type: 3}
+  Sprite_HackingForward: {fileID: -478154266, guid: 825464a7fc5d15c4cafd9d8e9fd52958, type: 3}
+  Sprite_HackingRight: {fileID: -334543630, guid: 34ce98f2bf7ad7c44b009e7f7c25cb1e, type: 3}
+  Sprite_HackingLeft: {fileID: 1021601582, guid: 028907bffbf7e4f4a8caac166fc809d6, type: 3}
+  Sprite_HackingBack: {fileID: 631504222, guid: 78cd7f2be03690b4fad0fc6aa39e93c5, type: 3}
 --- !u!1 &1358903995
 GameObject:
   m_ObjectHideFlags: 0
