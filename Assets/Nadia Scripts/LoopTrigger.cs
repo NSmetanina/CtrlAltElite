@@ -3,6 +3,7 @@ using UnityEngine;
 public class LoopTrigger : MonoBehaviour
 {
     public Animator anim;
+    public AnimationClip animationClip;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -12,7 +13,7 @@ public class LoopTrigger : MonoBehaviour
         
         if (other.CompareTag("Respawn"))
         {
-            anim.Play("ObjectMove", 0, 0f);
+            anim.Play(animationClip.name, 0, 0f);
             Debug.Log("It is looping");
         }
     }
