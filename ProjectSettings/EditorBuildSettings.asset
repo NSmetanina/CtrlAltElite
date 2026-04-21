@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nikita/Scenes/MainMenu.unity
+    path: Assets/Nikita/MenuScenes/StartMenu.unity
     guid: b432627fed6ed984b830ea5e1e8e3aaa
   - enabled: 1
     path: Assets/Nikita/Scenes/ComicIntro.unity
