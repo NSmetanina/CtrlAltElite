@@ -2162,10 +2162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a7a553f57738324b9323c79052e7953, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsGrounded: 0
   speed: 1
-  JumpPower: 2.5
-  rb: {fileID: 1349017169}
+  direction: {x: 0, y: 0, z: 0}
 --- !u!212 &1349017173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2210,12 +2208,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 894216249, guid: 1fbf63c64aa7d3a4c88a1c000c0b169a, type: 3}
+  m_Sprite: {fileID: -1208733515, guid: 495fb3932b95b9c43815a99bafb43bc6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 1
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.17, y: 9.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
