@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void Movement()     //change position based on direction from read input * set movement speed * fixed Deltatime ( so movement is consistent )
     {
-        transform.position += direction * speed * Time.deltaTime;
+        transform.position += (direction * speed * Time.deltaTime) *-1;
     }
 
     void ReadInput()
