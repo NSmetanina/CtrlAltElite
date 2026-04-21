@@ -1740,11 +1740,11 @@ MonoBehaviour:
   Sprite_Forward: {fileID: 1815935596, guid: f37b75a0f041bf346a9baa1388152459, type: 3}
   Sprite_Right: {fileID: 394672385, guid: e0fb1e39e68c99246b03135788cd0589, type: 3}
   Sprite_Left: {fileID: -1208733515, guid: 495fb3932b95b9c43815a99bafb43bc6, type: 3}
-  Sprite_Back: {fileID: 894216249, guid: 6e9fe9095b374ba49b31ece10535a688, type: 3}
-  Sprite_HackingForward: {fileID: 1815935596, guid: f37b75a0f041bf346a9baa1388152459, type: 3}
-  Sprite_HackingRight: {fileID: 394672385, guid: e0fb1e39e68c99246b03135788cd0589, type: 3}
-  Sprite_HackingLeft: {fileID: -1208733515, guid: 495fb3932b95b9c43815a99bafb43bc6, type: 3}
-  Sprite_HackingBack: {fileID: 894216249, guid: 6e9fe9095b374ba49b31ece10535a688, type: 3}
+  Sprite_Back: {fileID: 21300000, guid: 6e9fe9095b374ba49b31ece10535a688, type: 3}
+  Sprite_HackingForward: {fileID: -478154266, guid: 3f000cb71385ef7478d9c2f31e02ce42, type: 3}
+  Sprite_HackingRight: {fileID: -334543630, guid: a00fdbd23246faf40b6cf3f3379c2bdd, type: 3}
+  Sprite_HackingLeft: {fileID: 1021601582, guid: 1a2978f32aeafb14385580533a9d76dc, type: 3}
+  Sprite_HackingBack: {fileID: 631504222, guid: 9cae79145f8fe4247852ca0ffecfc7e8, type: 3}
 --- !u!1 &1358903995
 GameObject:
   m_ObjectHideFlags: 0
