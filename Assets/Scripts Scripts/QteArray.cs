@@ -4,6 +4,7 @@ using TMPro;
 
 public class ForLoopQte : MonoBehaviour
 {
+    public Animator fanAnimator;
     public float timer = 5f; //The time limitation for the QTE
     private bool isActive = false; //This variable is to prevent the code to repeat too many times
     public TextMeshProUGUI[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
@@ -41,20 +42,22 @@ public class ForLoopQte : MonoBehaviour
 
                     Debug.Log("QTE Successed");
                     gameObject.SetActive(false);
+                    fanAnimator.SetBool("StopFan", true);
 
                 }
             }
             else if(Input.anyKeyDown) //When the player enters any letter that is not required
                 {
-                isActive = false; 
-                texts[currentIndex].color = Color.red;
-                timeAnimator.SetBool("Pause", true);
+                    isActive = false; 
+                    texts[currentIndex].color = Color.red;
+                    timeAnimator.SetBool("Pause", true);
 
-                Debug.Log("QTE failed");
-                gameObject.SetActive(false);
+                    Debug.Log("QTE failed");
+                    gameObject.SetActive(false);
+                    fanAnimator.SetBool("StopFan", false);
 
 
-                return;
+                    return;
                 }
             else if (timer <= 0) //When the timer hits 0
             {
@@ -64,6 +67,7 @@ public class ForLoopQte : MonoBehaviour
 
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
+                fanAnimator.SetBool("StopFan", false);
 
 
                 return;
