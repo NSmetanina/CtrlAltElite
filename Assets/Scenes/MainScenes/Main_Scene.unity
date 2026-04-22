@@ -1474,6 +1474,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c7fc2211da3ccb44af1cf7324fd5a1f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 644284126}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c7fc2211da3ccb44af1cf7324fd5a1f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 644284130}
   m_SourcePrefab: {fileID: 100100000, guid: 8c7fc2211da3ccb44af1cf7324fd5a1f, type: 3}
 --- !u!1 &644284125 stripped
 GameObject:
@@ -1502,6 +1505,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &644284130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 644284125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78a7def557288dd4e87410c95b129ca9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObjectToParent: {fileID: 1417705350}
+  ParentObject: {fileID: 1828280874}
 --- !u!1 &686786182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,6 +3222,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1401490118}
   m_CullTransparentMesh: 1
+--- !u!4 &1417705350 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7098548332196017162, guid: 67e60337cea61824a86824f7ea4dcbeb, type: 3}
+  m_PrefabInstance: {fileID: 934251193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1435201816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3558,6 +3580,11 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!4 &1828280874 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5286020447105833396, guid: 8c7fc2211da3ccb44af1cf7324fd5a1f, type: 3}
+  m_PrefabInstance: {fileID: 644284124}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1913194200
 GameObject:
   m_ObjectHideFlags: 0
