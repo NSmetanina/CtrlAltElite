@@ -9,7 +9,12 @@ public class FadeScript : MonoBehaviour
     public CanvasGroup canvasGroup;
     public float fadeDuration = 2.0f;
 
+    public float fadeOutSeconds = 9.0f;
+    public float changeSceneSeconds = 11.0f;
+
     public bool fadeIn = false;
+
+    public string sceneName;
 
     void Start()
     {
@@ -22,10 +27,10 @@ public class FadeScript : MonoBehaviour
 
     IEnumerator FadeOutTime()
     {
-        yield return new WaitForSeconds(75);
+        yield return new WaitForSeconds(fadeOutSeconds);
         FadeOut();
-        yield return new WaitForSeconds(10);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return new WaitForSeconds(changeSceneSeconds);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void FadeIn()
