@@ -2977,7 +2977,7 @@ GameObject:
   - component: {fileID: 2038252922}
   - component: {fileID: 2038252926}
   m_Layer: 5
-  m_Name: Elevator Canvas
+  m_Name: Hack Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
