@@ -2710,6 +2710,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 475690267018848267, guid: 1648e2522e1b26f439765e2916628015, type: 3}
+      propertyPath: HackUi
+      value: 
+      objectReference: {fileID: 263240838}
+    - target: {fileID: 475690267018848267, guid: 1648e2522e1b26f439765e2916628015, type: 3}
+      propertyPath: BombHookHackUi
+      value: 
+      objectReference: {fileID: 1716720755}
+    - target: {fileID: 475690267018848267, guid: 1648e2522e1b26f439765e2916628015, type: 3}
+      propertyPath: CircularHackUi
+      value: 
+      objectReference: {fileID: 721146629}
+    - target: {fileID: 475690267018848267, guid: 1648e2522e1b26f439765e2916628015, type: 3}
+      propertyPath: ElevatorHackUi
+      value: 
+      objectReference: {fileID: 263240838}
+    - target: {fileID: 475690267018848267, guid: 1648e2522e1b26f439765e2916628015, type: 3}
+      propertyPath: WallClawHackUi
+      value: 
+      objectReference: {fileID: 2103071049}
     - target: {fileID: 1932490544818596757, guid: 1648e2522e1b26f439765e2916628015, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7378572
@@ -18578,7 +18598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eebb6fee8a794d146bd25ef93bdd8936, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaitTime: 1
+  WaitTime: 0
   elevator: {fileID: 6850901213868354577}
 --- !u!114 &6850901213868354580
 MonoBehaviour:

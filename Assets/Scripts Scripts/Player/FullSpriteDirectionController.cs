@@ -9,7 +9,11 @@ public class FullSpriteDirectionController : MonoBehaviour
     KeyCode activeKey = KeyCode.None;
     KeyCode FacingDirection = KeyCode.None;
 
-    [SerializeField] GameObject HackUi;
+    [SerializeField] GameObject ElevatorHackUi;
+    [SerializeField] GameObject WallClawHackUi;
+    [SerializeField] GameObject BombHookHackUi;
+    [SerializeField] GameObject CircularHackUi;
+    [SerializeField] GameObject FanHackUi;
 
     [SerializeField] Sprite Sprite_Forward; //assigning standing sprites so I can put the right sprites in the variables
     [SerializeField] Sprite Sprite_Right;
@@ -135,7 +139,7 @@ public class FullSpriteDirectionController : MonoBehaviour
                 animator.SetBool("IsMovingRight", false);
                 
                 animator.SetBool("Idle", true);
-                if(HackUi.activeSelf) //if you are running the minigame (active self checks if the game object itself is active)
+                if(ElevatorHackUi.activeSelf || WallClawHackUi.activeSelf || BombHookHackUi.activeSelf || CircularHackUi.activeSelf) //if you are in a hacking zone
                 {
                     HackSprites();
                 }
