@@ -10,7 +10,7 @@ public class TriggerToHack : MonoBehaviour
     [SerializeField] private float waitTime;
 
     bool hackable = false; //hackable if in objects collider
-    bool hasBeenHacked = false; //If prev haced one is made true
+    public bool hasBeenHacked = false; //If prev haced one is made true
     
     public void OnTriggerEnter(Collider collision) 
     {

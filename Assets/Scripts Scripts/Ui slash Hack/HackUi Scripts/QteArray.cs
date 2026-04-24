@@ -10,6 +10,7 @@ public class ForLoopQte : MonoBehaviour
     private int currentIndex = 0; //The index that will be use for running through the QTE array
     public Animator timeAnimator;
     private KeyCode[]qteSequence = {KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V}; //The QTE array that also has the sequence of the QTE
+    public TriggerToHack triggerToHack;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -40,6 +41,7 @@ public class ForLoopQte : MonoBehaviour
                     timeAnimator.SetBool("Pause", true); //Pauses the time bar animation
 
                     Debug.Log("QTE Successed");
+                    triggerToHack.hasBeenHacked = true;
                     gameObject.SetActive(false);
 
                 }
