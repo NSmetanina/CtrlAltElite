@@ -35,14 +35,11 @@ public class TriggerToHack : MonoBehaviour
 
                 if (hasBeenHacked == false)
                     {
-                        hasBeenHacked = true;
+                        //hasBeenHacked = true;
                         
                         Debug.Log("Run Minigame"); //also use this space to/for sprite directrion somehow
                         HackMenu.SetActive(true);
                         Debug.Log ("Hack Menu Activated");
-                        
-                        Debug.Log("call script on object that is getting hacked");
-                        hackableObject.FindTargetToHack();
                     }
                 else
                     {

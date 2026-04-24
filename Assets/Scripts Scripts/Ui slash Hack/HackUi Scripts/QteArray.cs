@@ -24,8 +24,6 @@ public class ForLoopQte : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isActive) //If isActive becomes false, stop the program
-        return;
         timer -= Time.deltaTime; //Starting the count down
     
             if (Input.GetKeyDown(qteSequence[currentIndex])) //When the input of the player matches with the sequence of the QTE array
@@ -36,11 +34,12 @@ public class ForLoopQte : MonoBehaviour
 
                 if (currentIndex > 3) //When the player has gone through all of the letters in the QTE array
                 {
+                    currentIndex = 3;
                     isActive = false; //Stops the program
                     texts[currentIndex].color = Color.green;
                     timeAnimator.SetBool("Pause", true); //Pauses the time bar animation
 
-                    Debug.Log("QTE Successed");
+                    Debug.Log("QTE Succededsed");
                     triggerToHack.hasBeenHacked = true;
                     gameObject.SetActive(false);
 
@@ -54,7 +53,7 @@ public class ForLoopQte : MonoBehaviour
 
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
-
+                timer = 5f;
 
                 return;
                 }
@@ -66,7 +65,7 @@ public class ForLoopQte : MonoBehaviour
 
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
-
+                timer = 5f;
 
                 return;
             }
