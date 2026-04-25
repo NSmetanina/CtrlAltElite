@@ -418,7 +418,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 698393100}
-  - component: {fileID: 698393101}
   m_Layer: 0
   m_Name: UI Script
   m_TagString: Untagged
@@ -445,21 +444,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &698393101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698393099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f041108c06a87694d96a315775bb3e61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hackableObject: {fileID: 0}
-  HackMenu: {fileID: 789760740}
-  waitTime: 0
 --- !u!1 &789760740
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,7 +623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd97e5def79f145bb0360c493b8a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HackUi: {fileID: 1974785437}
+  HackUi: {fileID: 0}
   Sprite_Forward: {fileID: 1815935596, guid: f37b75a0f041bf346a9baa1388152459, type: 3}
   Sprite_Right: {fileID: 394672385, guid: e0fb1e39e68c99246b03135788cd0589, type: 3}
   Sprite_Left: {fileID: -1208733515, guid: 495fb3932b95b9c43815a99bafb43bc6, type: 3}
@@ -2518,8 +2502,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2504251139011100748}
-  - component: {fileID: 2993543036722453240}
-  - component: {fileID: 2993543036722453239}
   m_Layer: 0
   m_Name: Airduct_FINISHED
   m_TagString: Untagged
@@ -2527,36 +2509,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2993543036722453239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2993543036722453238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9d4ce2a7aeb2fd49b8109a3776d0eed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  elevatorMovement: {fileID: 0}
-  WaitTime: 0
-  elevator: {fileID: 6425001111338261543}
---- !u!114 &2993543036722453240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2993543036722453238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f041108c06a87694d96a315775bb3e61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hackableObject: {fileID: 2993543036722453239}
-  HackMenu: {fileID: 789760740}
-  waitTime: 0
 --- !u!4 &3219825996162530121
 Transform:
   m_ObjectHideFlags: 0
@@ -2926,7 +2878,6 @@ GameObject:
   - component: {fileID: 2537754984687317088}
   - component: {fileID: 2688929635213981206}
   - component: {fileID: 6553680659943727212}
-  - component: {fileID: 6553680659943727214}
   m_Layer: 0
   m_Name: Fan Center
   m_TagString: Untagged
@@ -3175,27 +3126,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6553680659943727214
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5646785622800390626}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.2021385, y: 1.2534308, z: 0.7493706}
-  m_Center: {x: 0.05069229, y: 0.23019095, z: 0.16973303}
 --- !u!33 &6560137044373826894
 MeshFilter:
   m_ObjectHideFlags: 0
