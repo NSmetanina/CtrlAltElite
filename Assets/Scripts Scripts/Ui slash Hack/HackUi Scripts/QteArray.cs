@@ -60,8 +60,11 @@ public class ForLoopQte : MonoBehaviour
             else if (timer <= 0) //When the timer hits 0
             {
                 foreach (TextMeshProUGUI t in texts)
-                t.color = Color.red;
-                isActive = false;
+                if (t.color != Color.green)
+                {
+                    t.color = Color.red;
+                    isActive = false;
+                }
 
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
