@@ -2702,6 +2702,11 @@ CapsuleCollider:
   m_Height: 0.38719755
   m_Direction: 1
   m_Center: {x: -0.00000011920929, y: -0.3064017, z: -0.006399419}
+--- !u!54 &1136875206 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 4674503319421511920, guid: 1648e2522e1b26f439765e2916628015, type: 3}
+  m_PrefabInstance: {fileID: 1190202126}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1190202126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2753,6 +2758,14 @@ PrefabInstance:
     - target: {fileID: 4991683393346745333, guid: 1648e2522e1b26f439765e2916628015, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999469399994822234, guid: 1648e2522e1b26f439765e2916628015, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1136875206}
+    - target: {fileID: 5999469399994822234, guid: 1648e2522e1b26f439765e2916628015, type: 3}
+      propertyPath: JumpPower
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 6232462697965133676, guid: 1648e2522e1b26f439765e2916628015, type: 3}
       propertyPath: m_Convex
@@ -5701,9 +5714,10 @@ GameObject:
   - component: {fileID: 949676596239313629}
   - component: {fileID: 389841464181717334}
   - component: {fileID: 7458104783922474125}
+  - component: {fileID: 7458104783922474126}
   m_Layer: 0
   m_Name: P4 Pipe Ring
-  m_TagString: Untagged
+  m_TagString: ElevatorGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9710,9 +9724,10 @@ GameObject:
   - component: {fileID: 7679339106138797379}
   - component: {fileID: 7163372226507241330}
   - component: {fileID: 1561331529583581312}
+  - component: {fileID: 7679339106138797380}
   m_Layer: 0
   m_Name: Corrected Conveyor01
-  m_TagString: Untagged
+  m_TagString: ElevatorGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15897,6 +15912,7 @@ GameObject:
   - component: {fileID: 999697774178984867}
   - component: {fileID: 4338497142667132687}
   - component: {fileID: 970463981}
+  - component: {fileID: 5297589583039554769}
   m_Layer: 0
   m_Name: CentreClawBase
   m_TagString: Untagged
@@ -15904,6 +15920,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &5297589583039554769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297589583039554768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5052db98c783db94db6ffe5af9047acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  center: {fileID: 5297589583039554768}
+  smoothTime: 0.3
+  targetYRotation: 40
+  currentYRotation: 0
 --- !u!33 &5306407036089058372
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -19725,6 +19757,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7458104783922474126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 343688035689797398}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.17538494, y: 0.0342169, z: 0.17691329}
+  m_Center: {x: 0.0044779703, y: 0.00067689636, z: 0.007750855}
 --- !u!33 &7465513845013471640
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20321,6 +20374,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2965260339787550676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7679339106138797380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2364131690339537959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 13.072718, y: 0.80672956, z: 0.47875142}
+  m_Center: {x: 2.710493, y: 0.00000047683716, z: 0.23937559}
 --- !u!4 &7700841658296342586
 Transform:
   m_ObjectHideFlags: 0
@@ -20403,7 +20477,7 @@ GameObject:
   - component: {fileID: 8712061104870887986}
   m_Layer: 0
   m_Name: Box001
-  m_TagString: Untagged
+  m_TagString: ElevatorGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22962,9 +23036,10 @@ GameObject:
   - component: {fileID: 9193927972043633832}
   - component: {fileID: 4308492376279392337}
   - component: {fileID: 304682610439668991}
+  - component: {fileID: 9193927972043633833}
   m_Layer: 0
   m_Name: P4 Pipe
-  m_TagString: Untagged
+  m_TagString: ElevatorGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23076,6 +23151,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 709578002132677498}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &9193927972043633833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9144463843948672463}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2624083, y: 10.621424, z: 0.8293852}
+  m_Center: {x: -0.015026692, y: 1.2963684, z: 0.0000006197803}
 --- !u!23 &9204542526668603243
 MeshRenderer:
   m_ObjectHideFlags: 0

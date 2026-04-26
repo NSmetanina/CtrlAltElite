@@ -180,6 +180,7 @@ MonoBehaviour:
   hackableObject: {fileID: 37496564}
   HackMenu: {fileID: 0}
   waitTime: 0
+  hasBeenHacked: 0
 --- !u!114 &37496563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -490,6 +491,7 @@ MonoBehaviour:
   hackableObject: {fileID: 173721929}
   HackMenu: {fileID: 1587383964}
   waitTime: 0
+  hasBeenHacked: 0
 --- !u!114 &173721928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1616,7 +1618,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  direction: {x: 0, y: 0, z: 0}
+  IsGrounded: 0
+  JumpPower: 1
+  rb: {fileID: 1349017169}
 --- !u!212 &1349017173
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1728,7 +1732,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd97e5def79f145bb0360c493b8a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HackUi: {fileID: 1587383964}
+  ElevatorHackUi: {fileID: 0}
+  WallClawHackUi: {fileID: 0}
+  BombHookHackUi: {fileID: 0}
+  CircularHackUi: {fileID: 0}
+  FanHackUi: {fileID: 0}
   Sprite_Forward: {fileID: 1815935596, guid: f37b75a0f041bf346a9baa1388152459, type: 3}
   Sprite_Right: {fileID: 394672385, guid: e0fb1e39e68c99246b03135788cd0589, type: 3}
   Sprite_Left: {fileID: -1208733515, guid: 495fb3932b95b9c43815a99bafb43bc6, type: 3}
@@ -2148,6 +2156,7 @@ MonoBehaviour:
   - {fileID: 1459294973}
   - {fileID: 1459294973}
   timeAnimator: {fileID: 474393096}
+  triggerToHack: {fileID: 0}
 --- !u!222 &1587383967
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3074,6 +3083,7 @@ MonoBehaviour:
   timer: 5
   texts: []
   timeAnimator: {fileID: 474393096}
+  triggerToHack: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
