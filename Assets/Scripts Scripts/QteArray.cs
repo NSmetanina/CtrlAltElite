@@ -1,13 +1,12 @@
 using UnityEngine;
 using System.Collections;
-using TMPro;
 
 public class ForLoopQte : MonoBehaviour
 {
     public Animator fanAnimator;
     public float timer = 5f; //The time limitation for the QTE
     private bool isActive = false; //This variable is to prevent the code to repeat too many times
-    public TextMeshProUGUI[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
+    public UnityEngine.UI.Image[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
     private int currentIndex = 0; //The index that will be use for running through the QTE array
     public Animator timeAnimator;
     private KeyCode[]qteSequence = {KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V}; //The QTE array that also has the sequence of the QTE
@@ -17,8 +16,8 @@ public class ForLoopQte : MonoBehaviour
     void Start()
     {
         isActive = true; //So that the program runs
-        foreach (TextMeshProUGUI t in texts) //Changes every text variable in the text array to black
-        t.color = Color.black;
+        // foreach (UnityEngine.UI.Image t in texts) //Changes every text variable in the text array to black
+        // t.color = Color.black;
     }
 
     // Update is called once per frame
@@ -61,7 +60,7 @@ public class ForLoopQte : MonoBehaviour
                 }
             else if (timer <= 0) //When the timer hits 0
             {
-                foreach (TextMeshProUGUI t in texts)
+                foreach (UnityEngine.UI.Image t in texts)
                 t.color = Color.red;
                 isActive = false;
 
