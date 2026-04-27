@@ -14,7 +14,7 @@ public class FadeScript : MonoBehaviour
 
     public bool fadeIn = false;
 
-    public string sceneName;
+    //public string sceneName;
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class FadeScript : MonoBehaviour
         yield return new WaitForSeconds(fadeOutSeconds);
         FadeOut();
         yield return new WaitForSeconds(changeSceneSeconds);
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
     }
 
     public void FadeIn()
