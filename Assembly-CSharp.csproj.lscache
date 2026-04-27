@@ -55,6 +55,7 @@ Assets/Nikita/Scripts/
  UIFunctions.cs
 Assets/Scripts Scripts/
  BlobShadow.cs
+ ChildScript.cs
  ClawRotation.cs
  ComicScroller.cs
  ElevatorMovement.cs
@@ -414,7 +415,7 @@ C:/Program Files/Unity/Hub/Editor/6000.0.56f1/Editor/Data/Tools/Unity.SourceGene
  Unity.Properties.SourceGenerator.dll
  Unity.SourceGenerators.dll
  Unity.UIToolkit.SourceGenerator.dll
-C:/Users/nadia/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.1/Analyzers/Microsoft.Unity.Analyzers.dll
+C:/Users/nadia/.vscode/extensions/visualstudiotoolsforunity.vstuc-1.2.2/Analyzers/Microsoft.Unity.Analyzers.dll
 
 [analyzerConfigFiles]
 Temp/obj/Assembly-CSharp/Assembly-CSharp.GeneratedMSBuildEditorConfig.editorconfig
