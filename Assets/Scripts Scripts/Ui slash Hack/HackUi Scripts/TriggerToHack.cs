@@ -9,8 +9,8 @@ public class TriggerToHack : MonoBehaviour
 
     [SerializeField] private float waitTime;
 
-    bool hackable = false;
-    bool hasBeenHacked = false;
+    bool hackable = false; //hackable if in objects collider
+    public bool hasBeenHacked = false; //If prev haced one is made true
     
     public void OnTriggerEnter(Collider collision) 
     {
@@ -35,19 +35,16 @@ public class TriggerToHack : MonoBehaviour
 
                 if (hasBeenHacked == false)
                     {
-                        hasBeenHacked = true;
+                        //hasBeenHacked = true;
                         
                         Debug.Log("Run Minigame"); //also use this space to/for sprite directrion somehow
                         HackMenu.SetActive(true);
                         Debug.Log ("Hack Menu Activated");
-                        
-                        Debug.Log("call script on object that is getting hacked");
-                        hackableObject.HackBehaviour();
                     }
                 else
                     {
                         Debug.Log("call script on object that is getting hacked");
-                        hackableObject.HackBehaviour();
+                        hackableObject.FindTargetToHack();
                     }
 
             }
