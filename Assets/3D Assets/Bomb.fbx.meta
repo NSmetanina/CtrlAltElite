@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 215b339c7e3069647b1be96180a03758
+guid: 5a08cdb139f0b1e409ddd98632e41a8a
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,33 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Dark metal
-    second: {fileID: 2100000, guid: 41423b80ddc2dc04ea5e8faf3482cb0a, type: 2}
+      name: Blue wire
+    second: {fileID: 2100000, guid: c6a63ff291fef3d42ab2992adbee5708, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Light metal
-    second: {fileID: 2100000, guid: 6f68344d282043c43a1b97a634a0f625, type: 2}
+      name: Dark green metal
+    second: {fileID: 2100000, guid: ead5b7c48b62d654cab960f77c8f05c4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glow
+    second: {fileID: 2100000, guid: 378b619a83699934092c57ff148d1167, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Metal
-    second: {fileID: 2100000, guid: 5ca22c4512647e14eaca6a8b5d84f21a, type: 2}
+    second: {fileID: 2100000, guid: bcf941fec720c5046a982b4fcb07ed24, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Red wire
-    second: {fileID: 2100000, guid: bb7fe8193163c2a41aca8a1026f59d80, type: 2}
+    second: {fileID: 2100000, guid: 91a3532ceb9e1ed409c703f6032d8a76, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Yellow paint
-    second: {fileID: 2100000, guid: 4d9e046c42af4ab43b54492f3ecd8683, type: 2}
+      name: Screen
+    second: {fileID: 2100000, guid: a0cff48e529cbe94b9a20b916fd9c25b, type: 2}
   - first:
-      type: UnityEngine:Texture2D
+      type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: yellow_metal_rust_diff_4k
-    second: {fileID: 2800000, guid: 10061d53c5550fb46975ba9e422d2b2a, type: 3}
+      name: lighter green metal
+    second: {fileID: 2100000, guid: 7ce5a4204522cb34f8ec289880e18ae9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
