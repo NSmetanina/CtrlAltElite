@@ -3,13 +3,29 @@ using UnityEngine.SceneManagement;
 
 public class UIFunctions : MonoBehaviour
 {
+
+    public GameObject UIMenu;
+    //public bool pauseMenuActive;
+    private bool isActive = false; //This variable is to prevent the code to repeat too many times
+
     public string sceneName;
-    
+
+    void Start()
+    {
+        isActive = true; //So that the program runs
+        UIMenu.SetActive(false);
+        //pauseMenuActive = false;
+        
+    }
+
     void Update()
     {
+        if (!isActive) //If isActive becomes false, stop the program
+            return;
         PressKeyToSetActive();
-
     }
+    
+
 
     public void LoadSceneByName(string sceneName)
     {
@@ -27,19 +43,44 @@ public class UIFunctions : MonoBehaviour
         Debug.Log("Application has Quit. This will only quit when running Build");
     }
 
-    public GameObject objectToToggle;
-    public void ActivateObjectBtn()
-    {
-        objectToToggle.SetActive(true);
-    }
+    //public GameObject objectToToggle;
+    //public void ActivateObjectBtn()
+    //{
+    //    objectToToggle.SetActive(true);
+    //}
 
-    public GameObject UIMenu;
     public void PressKeyToSetActive()
     {
+
         if (Input.GetKey(KeyCode.Q))
         {
-            UIMenu.SetActive(true);
-        }
+            
 
+            Debug.Log("You pressed q");
+            if (isActive == true) 
+            {
+                UIMenu.SetActive(true);
+                //pauseMenuActive = true;
+                //if (Input.GetKey(KeyCode.Q))
+                //{
+                //    isActive = false;
+                //    UIMenu.SetActive(false);
+                //    Debug.Log("Disappeareddddddddddddddddddddddddddddddddddddddddddddddddd");
+                //}
+            }
+            else
+            {
+                UIMenu.SetActive(false);
+                //pauseMenuActive = false;
+            }
+
+        }
+    }
+
+    public void BackButtonPressed()
+    {
+
+        UIMenu.SetActive(false);
+        Debug.Log("Back pressed");
     }
 }
