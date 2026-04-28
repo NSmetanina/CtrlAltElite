@@ -1,12 +1,13 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
-public class ForLoopQte : MonoBehaviour
+public class QteArray : MonoBehaviour
 {
     public Animator fanAnimator;
     public float timer = 5f; //The time limitation for the QTE
     private bool isActive = false; //This variable is to prevent the code to repeat too many times
-    public UnityEngine.UI.Image[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
+    public TextMeshProUGUI[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
     private int currentIndex = 0; //The index that will be use for running through the QTE array
     public Animator timeAnimator;
     private KeyCode[]qteSequence = {KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V}; //The QTE array that also has the sequence of the QTE
@@ -17,8 +18,8 @@ public class ForLoopQte : MonoBehaviour
     void Start()
     {
         isActive = true; //So that the program runs
-        // foreach (UnityEngine.UI.Image t in texts) //Changes every text variable in the text array to black
-        // t.color = Color.black;
+        foreach (TextMeshProUGUI t in texts) //Changes every text variable in the text array to black
+            t.color = Color.black;
     }
 
     // Update is called once per frame
@@ -52,23 +53,23 @@ public class ForLoopQte : MonoBehaviour
                     texts[currentIndex].color = Color.red;
                     timeAnimator.SetBool("Pause", true);
 
-<<<<<<<< HEAD:Assets/Scripts Scripts/QteArrayImage.cs
+
                     Debug.Log("QTE failed");
                     gameObject.SetActive(false);
                     fanAnimator.SetBool("StopFan", false);
 
-========
+
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
                 timer = 5f;
->>>>>>>> Max---Development:Assets/Scripts Scripts/Ui slash Hack/HackUi Scripts/QteArray.cs
+
 
                     return;
                 }
             else if (timer <= 0) //When the timer hits 0
             {
-<<<<<<<< HEAD:Assets/Scripts Scripts/QteArrayImage.cs
-                foreach (UnityEngine.UI.Image t in texts)
+
+                foreach (TextMeshProUGUI t in texts)
                 t.color = Color.red;
                 isActive = false;
 
@@ -76,7 +77,7 @@ public class ForLoopQte : MonoBehaviour
                 gameObject.SetActive(false);
                 fanAnimator.SetBool("StopFan", false);
 
-========
+
                 foreach (TextMeshProUGUI t in texts)
                 if (t.color != Color.green)
                 {
@@ -87,7 +88,7 @@ public class ForLoopQte : MonoBehaviour
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
                 timer = 5f;
->>>>>>>> Max---Development:Assets/Scripts Scripts/Ui slash Hack/HackUi Scripts/QteArray.cs
+
 
                 return;
             }

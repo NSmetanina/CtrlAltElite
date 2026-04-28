@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class ForLoopQte : MonoBehaviour
+public class QteArrayImage : MonoBehaviour
 {
     public Animator fanAnimator;
     public float timer = 5f; //The time limitation for the QTE
@@ -52,22 +52,21 @@ public class ForLoopQte : MonoBehaviour
                     texts[currentIndex].color = Color.red;
                     timeAnimator.SetBool("Pause", true);
 
-<<<<<<<< HEAD:Assets/Scripts Scripts/QteArrayImage.cs
+
                     Debug.Log("QTE failed");
                     gameObject.SetActive(false);
                     fanAnimator.SetBool("StopFan", false);
 
-========
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
                 timer = 5f;
->>>>>>>> Max---Development:Assets/Scripts Scripts/Ui slash Hack/HackUi Scripts/QteArray.cs
+
 
                     return;
                 }
             else if (timer <= 0) //When the timer hits 0
             {
-<<<<<<<< HEAD:Assets/Scripts Scripts/QteArrayImage.cs
+
                 foreach (UnityEngine.UI.Image t in texts)
                 t.color = Color.red;
                 isActive = false;
@@ -76,8 +75,8 @@ public class ForLoopQte : MonoBehaviour
                 gameObject.SetActive(false);
                 fanAnimator.SetBool("StopFan", false);
 
-========
-                foreach (TextMeshProUGUI t in texts)
+
+                foreach (UnityEngine.UI.Image t in texts)
                 if (t.color != Color.green)
                 {
                     t.color = Color.red;
@@ -87,7 +86,7 @@ public class ForLoopQte : MonoBehaviour
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
                 timer = 5f;
->>>>>>>> Max---Development:Assets/Scripts Scripts/Ui slash Hack/HackUi Scripts/QteArray.cs
+
 
                 return;
             }

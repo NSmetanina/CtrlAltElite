@@ -528,6 +528,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fanAnimator: {fileID: 0}
   timer: 5
   texts: []
   timeAnimator: {fileID: 2132673848}
@@ -626,7 +627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 263240839}
   - component: {fileID: 263240841}
-  - component: {fileID: 263240840}
+  - component: {fileID: 263240842}
   m_Layer: 0
   m_Name: Elevator Hack UI
   m_TagString: Untagged
@@ -658,27 +659,6 @@ RectTransform:
   m_AnchoredPosition: {x: 49.86802, y: -116.09703}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &263240840
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263240838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timer: 5
-  texts:
-  - {fileID: 635775332}
-  - {fileID: 1581220133}
-  - {fileID: 1482489988}
-  - {fileID: 1557055032}
-  - {fileID: 1557055032}
-  timeAnimator: {fileID: 1379218055}
-  triggerToHack: {fileID: 6850901213868354580}
 --- !u!222 &263240841
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -687,6 +667,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263240838}
   m_CullTransparentMesh: 1
+--- !u!114 &263240842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263240838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 314e2c904f82a6e4185b0686989a5467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fanAnimator: {fileID: 0}
+  timer: 5
+  texts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  timeAnimator: {fileID: 0}
+  triggerToHack: {fileID: 0}
 --- !u!1 &295481236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1857,6 +1858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fanAnimator: {fileID: 0}
   timer: 5
   texts: []
   timeAnimator: {fileID: 295481237}
@@ -1999,13 +2001,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fanAnimator: {fileID: 0}
   timer: 5
   texts:
-  - {fileID: 1919631330}
-  - {fileID: 109035662}
-  - {fileID: 1349798195}
-  - {fileID: 307839552}
-  - {fileID: 307839552}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   timeAnimator: {fileID: 295481237}
   triggerToHack: {fileID: 0}
 --- !u!222 &721146632
@@ -2123,6 +2126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fanAnimator: {fileID: 0}
   timer: 5
   texts: []
   timeAnimator: {fileID: 1379218055}
@@ -4234,6 +4238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fanAnimator: {fileID: 0}
   timer: 5
   texts: []
   timeAnimator: {fileID: 454669720}
@@ -4376,13 +4381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fanAnimator: {fileID: 0}
   timer: 5
   texts:
-  - {fileID: 1344875477}
-  - {fileID: 1594993341}
-  - {fileID: 414849484}
-  - {fileID: 105255264}
-  - {fileID: 105255264}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   timeAnimator: {fileID: 2132673848}
   triggerToHack: {fileID: 0}
 --- !u!222 &1716720758
@@ -5015,13 +5021,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fanAnimator: {fileID: 0}
   timer: 5
   texts:
-  - {fileID: 1974807837}
-  - {fileID: 601260541}
-  - {fileID: 2025071142}
-  - {fileID: 1288214003}
-  - {fileID: 1288214003}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   timeAnimator: {fileID: 454669720}
   triggerToHack: {fileID: 0}
 --- !u!222 &2103071052

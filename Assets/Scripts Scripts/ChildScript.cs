@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ClawChildScript : MonoBehaviour
+public class ChildScript : MonoBehaviour
 {
 
     public Transform ObjectToParent;
