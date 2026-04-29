@@ -679,15 +679,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314e2c904f82a6e4185b0686989a5467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fanAnimator: {fileID: 0}
+  fanAnimator: {fileID: 1379218055}
   timer: 5
   texts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  timeAnimator: {fileID: 0}
-  triggerToHack: {fileID: 0}
+  - {fileID: 635775332}
+  - {fileID: 1581220133}
+  - {fileID: 1482489988}
+  - {fileID: 1557055032}
+  timeAnimator: {fileID: 6850901213868354577}
+  triggerToHack: {fileID: 6850901213868354580}
 --- !u!1 &295481236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1644,7 +1644,7 @@ GameObject:
   - component: {fileID: 635775332}
   - component: {fileID: 635775331}
   m_Layer: 0
-  m_Name: Z
+  m_Name: Z (elevator)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3508,7 +3508,7 @@ GameObject:
   - component: {fileID: 1482489988}
   - component: {fileID: 1482489987}
   m_Layer: 0
-  m_Name: C
+  m_Name: C (elevator)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3742,7 +3742,7 @@ GameObject:
   - component: {fileID: 1557055032}
   - component: {fileID: 1557055031}
   m_Layer: 0
-  m_Name: V
+  m_Name: V (elevator)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3901,7 +3901,7 @@ GameObject:
   - component: {fileID: 1581220133}
   - component: {fileID: 1581220132}
   m_Layer: 0
-  m_Name: X
+  m_Name: X (elevator)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
