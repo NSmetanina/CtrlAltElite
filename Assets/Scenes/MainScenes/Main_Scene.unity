@@ -2365,7 +2365,7 @@ GameObject:
   - component: {fileID: 413385550}
   - component: {fileID: 413385549}
   m_Layer: 0
-  m_Name: Hack UI
+  m_Name: Elvator Hack UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2414,9 +2414,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   timeAnimator: {fileID: 374679531}
-  triggerToHack: {fileID: 0}
+  triggerToHack: {fileID: 6850901214976857398}
 --- !u!222 &413385550
 CanvasRenderer:
   m_ObjectHideFlags: 0
