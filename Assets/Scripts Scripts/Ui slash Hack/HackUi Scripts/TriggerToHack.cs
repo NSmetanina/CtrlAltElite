@@ -4,13 +4,16 @@ using System.Collections;
 
 public class TriggerToHack : MonoBehaviour
 {
-    public HackableObject hackableObject;
+    // public HackableObject hackableObject;
     public GameObject HackMenu;
-
-    [SerializeField] private float waitTime;
+    public HackableObject hackableObject;
 
     bool hackable = false; //hackable if in objects collider
-    public bool hasBeenHacked = false; //If prev haced one is made true
+
+    public bool hasBeenHacked = false; //If prev hacked one is made true
+   
+
+    
     
     public void OnTriggerEnter(Collider collision) 
     {
@@ -27,8 +30,6 @@ public class TriggerToHack : MonoBehaviour
     {
         if (hackable)
         {
-        
-            Debug.Log("in range!");
 
             if (Input.GetKeyDown("e"))    //if you try to hack it and it can be hacked
             {
@@ -41,10 +42,11 @@ public class TriggerToHack : MonoBehaviour
                         HackMenu.SetActive(true);
                         Debug.Log ("Hack Menu Activated");
                     }
-                else
+                else 
                     {
                         Debug.Log("call script on object that is getting hacked");
                         hackableObject.FindTargetToHack();
+                        hasBeenHacked = false;
                     }
 
             }

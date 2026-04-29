@@ -2,15 +2,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;  //for  loading scenes
 using System.Collections; //for the Coroutine
 
-    //is called when other script calls this script
-
 public class HackableObject : MonoBehaviour
 {
     public ElevatorMovement elevatorMovement;
+    public CircularClaw circularClaw;
 
 
     public void FindTargetToHack()
     {
+      Debug.Log("FindTargetToHackRuns");
         if (gameObject.tag == "ElevatorGround")
             {
                 elevatorMovement.HackBehaviour();
@@ -27,9 +27,10 @@ public class HackableObject : MonoBehaviour
             {
               //   BombHook?.HackBehaviour();
             }
-        else if(gameObject.tag == "CircularClaw")
+        else if(gameObject.tag == "Circular")
             {
-              //   CircularClaw?.HackBehaviour();
+              Debug.Log("CircularClawRuns");
+              circularClaw.HackBehaviour();
             }
     }
 }

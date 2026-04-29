@@ -3,11 +3,10 @@ using System.Collections;
 using TMPro;
 
 public class QteArray : MonoBehaviour
-{
-    public Animator fanAnimator;
+{      
     public float timer = 5f; //The time limitation for the QTE
     private bool isActive = false; //This variable is to prevent the code to repeat too many times
-    public TextMeshProUGUI[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
+    [SerializeField] private TextMeshProUGUI[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
     private int currentIndex = 0; //The index that will be use for running through the QTE array
     public Animator timeAnimator;
     private KeyCode[]qteSequence = {KeyCode.Z, KeyCode.X, KeyCode.C, KeyCode.V}; //The QTE array that also has the sequence of the QTE
@@ -19,12 +18,17 @@ public class QteArray : MonoBehaviour
     {
         isActive = true; //So that the program runs
         foreach (TextMeshProUGUI t in texts) //Changes every text variable in the text array to black
-            t.color = Color.black;
+            t.color = Color.white;
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (timer < 0f)
+        {
+            timer =5f;
+        }
         timer -= Time.deltaTime; //Starting the count down
     
             if (Input.GetKeyDown(qteSequence[currentIndex])) //When the input of the player matches with the sequence of the QTE array
@@ -43,8 +47,7 @@ public class QteArray : MonoBehaviour
                     Debug.Log("QTE Succededsed");
                     triggerToHack.hasBeenHacked = true;
                     gameObject.SetActive(false);
-                    fanAnimator.SetBool("StopFan", true);
-
+                    return;
                 }
             }
             else if(Input.anyKeyDown) //When the player enters any letter that is not required
@@ -56,7 +59,6 @@ public class QteArray : MonoBehaviour
 
                     Debug.Log("QTE failed");
                     gameObject.SetActive(false);
-                    fanAnimator.SetBool("StopFan", false);
 
 
                 Debug.Log("QTE failed");
@@ -75,7 +77,6 @@ public class QteArray : MonoBehaviour
 
                 Debug.Log("QTE failed");
                 gameObject.SetActive(false);
-                fanAnimator.SetBool("StopFan", false);
 
 
                 foreach (TextMeshProUGUI t in texts)
