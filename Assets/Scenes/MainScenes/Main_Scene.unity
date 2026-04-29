@@ -1665,7 +1665,6 @@ MonoBehaviour:
   - {fileID: 2104123435}
   - {fileID: 827523383}
   timeAnimator: {fileID: 1231073958}
-  triggerToHack: {fileID: 5297589583253244113}
 --- !u!1 &275839087
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +2062,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &358230193
 Transform:
   m_ObjectHideFlags: 0
@@ -17036,8 +17035,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8250102203351856882}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.48725277, y: 0.51243037, z: 0.5124301, w: -0.4872528}
-  m_LocalPosition: {x: 0.895, y: 1.696, z: 1.072}
+  m_LocalRotation: {x: 0.525139, y: -0.47352803, z: -0.473528, w: -0.5251395}
+  m_LocalPosition: {x: 0.893, y: 1.696, z: 1.065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21420,8 +21419,8 @@ Transform:
   m_LocalScale: {x: 0.8409, y: 0.8409, z: 0.8409}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6250912750452322228}
   - {fileID: 2043546452833585131}
+  - {fileID: 6250912750452322228}
   - {fileID: 2631079803689199843}
   - {fileID: 1542789635}
   m_Father: {fileID: 0}
@@ -23809,10 +23808,10 @@ GameObject:
   - component: {fileID: 999697773996576701}
   - component: {fileID: 4338497142315799313}
   - component: {fileID: 5297589583253244114}
-  - component: {fileID: 5297589583253244113}
   - component: {fileID: 5297589583253244112}
   - component: {fileID: 5297589583253244111}
   - component: {fileID: 5297589583253244115}
+  - component: {fileID: 5297589583253244116}
   m_Layer: 0
   m_Name: CentreClawBase
   m_TagString: Circuclar
@@ -23832,8 +23831,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27fb25812c4776e40bca9ef121a7747e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaitTime: 2
+  WaitTime: 7
   centreClawAnim: {fileID: 5297589583253244115}
+  assemblePiece: {fileID: 8250102203351856882}
 --- !u!114 &5297589583253244112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23848,21 +23848,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elevatorMovement: {fileID: 6850901214976857399}
   circularClaw: {fileID: 5297589583253244111}
---- !u!114 &5297589583253244113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5297589583253244110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f041108c06a87694d96a315775bb3e61, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HackMenu: {fileID: 272698821}
-  hackableObject: {fileID: 5297589583253244112}
-  hasBeenHacked: 0
 --- !u!65 &5297589583253244114
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23906,6 +23891,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5297589583253244116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297589583253244110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f107c8467668c948a5a56e481601fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HackMenu: {fileID: 272698821}
+  hackableObject: {fileID: 5297589583253244112}
+  circularClaw: {fileID: 5297589583253244111}
+  playersTransform: {fileID: 8261189915009930198}
+  AssemblePOne: {fileID: 8250102203351856882}
+  hasBeenHacked: 0
 --- !u!1 &5310308176861982321
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ public class HackableObject : MonoBehaviour
       Debug.Log("FindTargetToHackRuns");
         if (gameObject.tag == "ElevatorGround")
             {
+              Debug.Log("Elevator tag found");
                 elevatorMovement.HackBehaviour();
             }
         else if(gameObject.tag == "Fan")
