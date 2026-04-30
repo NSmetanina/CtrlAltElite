@@ -17,10 +17,13 @@ public class CircularTriggerToHack : MonoBehaviour
 
     public bool hackable = false; //hackable if in objects collider
 
-    public bool hasBeenHacked = false; //If prev hacked one is made true
+    public bool hasThisBeenHacked; //If prev hacked one is made true
    
 
-    
+    void Start()
+    {
+        hasThisBeenHacked = false;
+    }
     
     public void OnTriggerEnter(Collider collision) 
     {
@@ -49,9 +52,9 @@ public class CircularTriggerToHack : MonoBehaviour
                 if (Input.GetKeyDown("e"))    //if you try to hack it and it can be hacked
                 {
 
-                    if (hasBeenHacked == false)
+                    if (hasThisBeenHacked == false)
                         {
-                            hasBeenHacked = true;
+                            // hasBeenHacked = true;
                             
                             Debug.Log("Run Minigame"); //also use this space to/for sprite directrion somehow
                             HackMenu.SetActive(true);

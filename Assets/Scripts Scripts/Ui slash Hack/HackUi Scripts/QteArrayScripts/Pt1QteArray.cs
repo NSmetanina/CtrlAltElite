@@ -4,12 +4,14 @@ using TMPro;
 
 public class Pt1QteArray : MonoBehaviour
 {
+    public CircularTriggerToHack circularTriggerToHack;
     public float timer = 5f; //The time limitation for the QTE
     private bool isActive = false; //This variable is to prevent the code to repeat too many times
     public TextMeshProUGUI[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
     private int currentIndex = 0; //The index that will be use for running through the QTE array
     public Animator timeAnimator;
     private KeyCode[]qteSequence = {KeyCode.C, KeyCode.V, KeyCode.Z, KeyCode.X}; //The QTE array that also has the sequence of the QTE
+    public int i;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,6 +19,8 @@ public class Pt1QteArray : MonoBehaviour
         isActive = true; //So that the program runs
         foreach (TextMeshProUGUI t in texts) //Changes every text variable in the text array to black
             t.color = Color.white;
+
+        
     }
 
     // Update is called once per frame
@@ -43,6 +47,7 @@ public class Pt1QteArray : MonoBehaviour
                     timeAnimator.SetBool("Pause", true); //Pauses the time bar animation
 
                     Debug.Log("QTE Succededsed");
+                    circularTriggerToHack.hasThisBeenHacked = true;
                     gameObject.SetActive(false);
                     return;
                 }
@@ -66,28 +71,28 @@ public class Pt1QteArray : MonoBehaviour
                 }
             else if (timer <= 0) //When the timer hits 0
             {
+                i = 0;
+                    foreach (TextMeshProUGUI t in texts)
+                    {
+                        i++;
+                        if( currentIndex < i)
+                        {
+                        t.color = Color.red;
+                        }
 
-                foreach (TextMeshProUGUI t in texts)
-                t.color = Color.red;
-                isActive = false;
+                        if(currentIndex+1 == i)
+                        {
+                        t.color = Color.white;
+                        }
 
-                Debug.Log("QTE failed");
-                gameObject.SetActive(false);
+                    }
 
-                foreach (TextMeshProUGUI t in texts)
-                if (t.color != Color.green)
-                {
-                    t.color = Color.red;
-                    isActive = false;
-                }
-
-                Debug.Log("QTE failed");
-                gameObject.SetActive(false);
-                timer = 5f;
-
-
-                return;
+                    Debug.Log("QTE failed");
+                    gameObject.SetActive(false);
+                    timer = 5f;
             }
+
+         return;
     }
 
 }

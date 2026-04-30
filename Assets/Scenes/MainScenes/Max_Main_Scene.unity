@@ -679,7 +679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 314e2c904f82a6e4185b0686989a5467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fanAnimator: {fileID: 1379218055}
   timer: 5
   texts:
   - {fileID: 635775332}
@@ -2797,15 +2796,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8261189914501154021, guid: 1648e2522e1b26f439765e2916628015, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1811786
+      value: 2.154
       objectReference: {fileID: 0}
     - target: {fileID: 8261189914501154021, guid: 1648e2522e1b26f439765e2916628015, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.119
+      value: 7.457
       objectReference: {fileID: 0}
     - target: {fileID: 8261189914501154021, guid: 1648e2522e1b26f439765e2916628015, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.33
+      value: 4.748
       objectReference: {fileID: 0}
     - target: {fileID: 8261189914501154021, guid: 1648e2522e1b26f439765e2916628015, type: 3}
       propertyPath: m_LocalRotation.w
@@ -18625,6 +18624,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elevatorMovement: {fileID: 6850901213868354579}
+  circularClaw: {fileID: 0}
+  circularPtTwoClaw: {fileID: 0}
+  bombPartCollectorScript: {fileID: 0}
 --- !u!114 &6850901213868354579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18651,9 +18653,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f041108c06a87694d96a315775bb3e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hackableObject: {fileID: 6850901213868354578}
   HackMenu: {fileID: 263240838}
-  waitTime: 0
+  hackableObject: {fileID: 6850901213868354578}
   hasBeenHacked: 0
 --- !u!65 &6850901213868354581
 BoxCollider:

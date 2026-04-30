@@ -8,7 +8,7 @@ public class CircularPtTwoClaw : MonoBehaviour
     [SerializeField] private float WaitInBetweenRotationAndP2PickUp; 
     public Animator centreClawAnim;
     public Animator rotationAnim;
-    public GameObject assemblePiece;
+    // public GameObject assemblePiece;
     public GameObject originalP2;
     public GameObject assemblePiece2;
     
