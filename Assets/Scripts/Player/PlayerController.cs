@@ -51,8 +51,8 @@ public class PlayerController : MonoBehaviour
 
     void ReadInput()
     {
-        float XSpeed = Input.GetAxisRaw("Horizontal");  // Input.GetAxisRaw("Horizontal"); & Input.GetAxisRaw("Vertical"); are methods by unity that already mean wasd and arrow keys for movement
-        float YSpeed = Input.GetAxisRaw("Vertical");    // this is getting and calling x and y speed here
+        float XSpeed = Input.GetAxisRaw("Vertical");  // Input.GetAxisRaw("Horizontal"); & Input.GetAxisRaw("Vertical"); are methods by unity that already mean wasd and arrow keys for movement
+        float YSpeed = Input.GetAxisRaw("Horizontal");    // this is getting and calling x and y speed here
 
 
         if((Input.GetKeyDown(KeyCode.Space)) && (IsGrounded == true))
@@ -61,7 +61,7 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        direction = new Vector3(XSpeed, 0f, YSpeed);     // this vector 3 represents ( x, y, z ) with Xspeed and Yspeed in their represtitive axis controlling movement where the player cant go up or down
+        direction = new Vector3(XSpeed, 0f, (YSpeed*-1));     // this vector 3 represents ( x, y, z ) with Xspeed and Yspeed in their represtitive axis controlling movement where the player cant go up or down
         direction.Normalize();                          // this is used for when the player is moving diagonally and converts this movement into the  "normal" original speed rather than being faster going diagonally
     }
 }
