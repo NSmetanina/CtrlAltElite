@@ -1974,6 +1974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a204bad80a6eccf489bb77a0935f9918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circularTriggerToHack: {fileID: 5297589583253244116}
   timer: 5
   texts:
   - {fileID: 2035644899}
@@ -1981,6 +1982,7 @@ MonoBehaviour:
   - {fileID: 2104123435}
   - {fileID: 827523383}
   timeAnimator: {fileID: 1231073958}
+  i: 0
 --- !u!1 &275839087
 GameObject:
   m_ObjectHideFlags: 0
@@ -9687,6 +9689,7 @@ MonoBehaviour:
   - {fileID: 1191366334}
   timeAnimator: {fileID: 1021578364}
   triggerToHack: {fileID: 6850901214976857398}
+  i: 0
 --- !u!222 &1387857555
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25217,7 +25220,7 @@ MonoBehaviour:
   SecondParentActivate: 0
   WaitTime: 3
   hackable: 0
-  hasBeenHacked: 0
+  hasThisBeenHacked: 0
 --- !u!114 &5297589583253244118
 MonoBehaviour:
   m_ObjectHideFlags: 0
