@@ -19,17 +19,17 @@ public class BombPartCollectorScript : MonoBehaviour
             {
                 UIBombPart1.SetActive(true);
             }
-            else if (BombPart1PreSetUp.activeSelf == true)
+            else if (BombPart2PreSetUp.activeSelf == true)
             {
-                UIBombPart1.SetActive(true);
+                UIBombPart2.SetActive(true);
             }
-            else if(BombPart1PreSetUp.activeSelf == true)
+            else if(BombPart3PreSetUp.activeSelf == true)
             {
-                UIBombPart1.SetActive(true);
+                UIBombPart3.SetActive(true);
             }
-            else if(BombPart1PreSetUp.activeSelf == true)
+            else if(BombPart4PreSetUp.activeSelf == true)
             {
-                UIBombPart1.SetActive(true);
+                UIBombPart4.SetActive(true);
             }
         }
 

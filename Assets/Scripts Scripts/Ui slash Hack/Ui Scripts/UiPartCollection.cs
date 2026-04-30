@@ -4,7 +4,7 @@ public class UiPartCollection : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
    
-    public PartCollection partCollection;
+    public BombPartCollectorScript bombPartCollectorScript;
 
     public GameObject UIBombPart1;
     public GameObject UIBombPart2;
@@ -13,19 +13,19 @@ public class UiPartCollection : MonoBehaviour
 
     void Update()
     {
-        if (partCollection.BombPart1PreSetUp.activeInHierarchy)
+        if (bombPartCollectorScript.BombPart1PreSetUp.activeInHierarchy)
         {   //partCollection.BombPart1PreSetUp.activeInHierarchy
             UIBombPart1.SetActive(true);
         }
-        if (partCollection.BombPart2PreSetUp.activeInHierarchy)
+        if (bombPartCollectorScript.BombPart2PreSetUp.activeInHierarchy)
         {
             UIBombPart2.SetActive(true);
         }
-        if (partCollection.BombPart3PreSetUp.activeInHierarchy)
+        if (bombPartCollectorScript.BombPart3PreSetUp.activeInHierarchy)
         {
             UIBombPart3.SetActive(true);
         }
-        if (partCollection.BombPart4PreSetUp.activeInHierarchy)
+        if (bombPartCollectorScript.BombPart4PreSetUp.activeInHierarchy)
         {
             UIBombPart4.SetActive(true);
         }

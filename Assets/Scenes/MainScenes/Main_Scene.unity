@@ -852,6 +852,129 @@ Transform:
   - {fileID: 1140031314}
   m_Father: {fileID: 90584076}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &71821725
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 71821729}
+  - component: {fileID: 71821728}
+  - component: {fileID: 71821727}
+  - component: {fileID: 71821726}
+  - component: {fileID: 71821730}
+  m_Layer: 0
+  m_Name: ChangeToHackable to True
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &71821726
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71821725}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &71821727
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71821725}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &71821728
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71821725}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &71821729
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71821725}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.178, y: 1.292, z: 1.708}
+  m_LocalScale: {x: 1, y: 0.59805, z: 1.0243}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71821730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71821725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59029c87466060448ccc3a3cc523d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AssembledPartTwo: {fileID: 8620367564157174783}
+  circularTriggerToHack: {fileID: 5297589583253244116}
 --- !u!1 &81819394
 GameObject:
   m_ObjectHideFlags: 0
@@ -7768,7 +7891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f39990137cfba47bd20a5499d92c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  partCollection: {fileID: 0}
+  bombPartCollectorScript: {fileID: 1446579024}
   UIBombPart1: {fileID: 823894182}
   UIBombPart2: {fileID: 449322708}
   UIBombPart3: {fileID: 591264861}
@@ -24916,13 +25039,13 @@ GameObject:
   - component: {fileID: 3838934343509574970}
   - component: {fileID: 999697773996576701}
   - component: {fileID: 4338497142315799313}
-  - component: {fileID: 5297589583253244114}
   - component: {fileID: 5297589583253244112}
   - component: {fileID: 5297589583253244111}
   - component: {fileID: 5297589583253244115}
   - component: {fileID: 5297589583253244116}
   - component: {fileID: 5297589583253244118}
   - component: {fileID: 5297589583253244117}
+  - component: {fileID: 5297589583253244114}
   - component: {fileID: 5297589583253244119}
   m_Layer: 0
   m_Name: CentreClawBase
@@ -25017,7 +25140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f107c8467668c948a5a56e481601fc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bombPartCollectorScript: {fileID: 0}
+  bombPartCollectorScript: {fileID: 1446579024}
   HackMenu: {fileID: 272698821}
   hackableObject: {fileID: 5297589583253244112}
   circularClaw: {fileID: 5297589583253244111}
@@ -25026,6 +25149,7 @@ MonoBehaviour:
   AssemblePOne: {fileID: 8250102203351856882}
   SecondParentActivate: 0
   WaitTime: 3
+  hackable: 0
   hasBeenHacked: 0
 --- !u!65 &5297589583253244117
 BoxCollider:
@@ -25061,9 +25185,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WaitTime: 2
+  WaitForSecondPartAnimation: 5.4
+  WaitInBetweenRotationAndP2PickUp: 2
   centreClawAnim: {fileID: 5297589583253244115}
   rotationAnim: {fileID: 1026871910}
   assemblePiece: {fileID: 1666883973}
+  originalP2: {fileID: 1230823825}
+  assemblePiece2: {fileID: 8620367564157174783}
 --- !u!114 &5297589583253244119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33830,6 +33958,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1098162979}
+  - {fileID: 71821729}
   - {fileID: 1280120120}
   - {fileID: 543450652951056670}
   - {fileID: 1471864779}

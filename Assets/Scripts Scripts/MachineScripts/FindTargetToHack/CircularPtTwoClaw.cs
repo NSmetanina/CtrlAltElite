@@ -4,9 +4,13 @@ using System.Collections; //for the Coroutine
 public class CircularPtTwoClaw : MonoBehaviour
 {
     [SerializeField] private float WaitTime; 
+    [SerializeField] private float WaitForSecondPartAnimation; 
+    [SerializeField] private float WaitInBetweenRotationAndP2PickUp; 
     public Animator centreClawAnim;
     public Animator rotationAnim;
     public GameObject assemblePiece;
+    public GameObject originalP2;
+    public GameObject assemblePiece2;
     
     public void HackPtTwoBehaviour()
     {
@@ -20,12 +24,17 @@ public class CircularPtTwoClaw : MonoBehaviour
 
      IEnumerator WaitAnimationLength()    //enumerators can wait
     {
-        yield return new WaitForSeconds(WaitTime);//wait
-        Debug.Log("set active");
-        assemblePiece.SetActive(true);  //set the assemble part active
+        Debug.Log("set p2  active");
+        yield return new WaitForSeconds(WaitInBetweenRotationAndP2PickUp);//wait
+        // assemblePiece.SetActive(true);  //set the assemble part active
         centreClawAnim.SetTrigger("P2PickUp");
-        //Start Camera Pan
+        originalP2.SetActive(false);
+        yield return new WaitForSeconds(WaitForSecondPartAnimation);//wait
+        assemblePiece2.SetActive(true);
+        
+                //Start Camera Pan
     }
+
     IEnumerator WaitRotationAnimationLength()    //enumerators can wait
     {
         yield return new WaitForSeconds(WaitTime);//wait

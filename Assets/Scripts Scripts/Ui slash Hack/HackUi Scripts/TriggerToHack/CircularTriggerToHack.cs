@@ -15,7 +15,7 @@ public class CircularTriggerToHack : MonoBehaviour
     public bool SecondParentActivate;
     public int WaitTime;
 
-    bool hackable = false; //hackable if in objects collider
+    public bool hackable = false; //hackable if in objects collider
 
     public bool hasBeenHacked = false; //If prev hacked one is made true
    
@@ -63,6 +63,7 @@ public class CircularTriggerToHack : MonoBehaviour
                             if (AssemblePOne.activeSelf == false)
                             {
                                 circularClaw.HackBehaviour();
+                                hackable = false;
                             }
                             else
                             {
