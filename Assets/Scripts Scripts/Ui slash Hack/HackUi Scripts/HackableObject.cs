@@ -6,6 +6,8 @@ public class HackableObject : MonoBehaviour
 {
     public ElevatorMovement elevatorMovement;
     public CircularClaw circularClaw;
+    public CircularPtTwoClaw circularPtTwoClaw;
+    public BombPartCollectorScript bombPartCollectorScript;
 
 
     public void FindTargetToHack()
@@ -27,6 +29,11 @@ public class HackableObject : MonoBehaviour
         else if(gameObject.tag == "BombHook")
             {
               //   BombHook?.HackBehaviour();
+            }
+            else if(bombPartCollectorScript.BombPart1PreSetUp.activeSelf == true)
+            {
+              Debug.Log("CircularPTwoClawRuns");
+              circularPtTwoClaw.HackPtTwoBehaviour();
             }
         else if(gameObject.tag == "Circular")
             {
