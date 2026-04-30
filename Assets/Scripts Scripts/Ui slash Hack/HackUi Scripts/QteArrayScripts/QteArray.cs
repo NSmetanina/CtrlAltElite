@@ -6,7 +6,6 @@ public class QteArray : MonoBehaviour
 {      
     public float timer = 5f; //The time limitation for the QTE
     public  int Progress;
-    private bool isActive = false; //This variable is to prevent the code to repeat too many times
     [SerializeField] private TextMeshProUGUI[] texts; //This is a text array so that you can put the QTE letters in the correct order in the inspector
     private int currentIndex = 0; //The index that will be use for running through the QTE array
     public Animator timeAnimator;
@@ -18,7 +17,6 @@ public class QteArray : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        isActive = true; //So that the program runs
         foreach (TextMeshProUGUI t in texts) //Changes every text variable in the text array to black
             t.color = Color.white;
     }
@@ -42,7 +40,6 @@ public class QteArray : MonoBehaviour
                 if (currentIndex > 3) //When the player has gone through all of the letters in the QTE array
                 {
                     currentIndex = 3;
-                    isActive = false; //Stops the program
                     texts[currentIndex].color = Color.green;
                     timeAnimator.SetBool("Pause", true); //Pauses the time bar animation
 
@@ -54,7 +51,6 @@ public class QteArray : MonoBehaviour
             }
             else if(Input.anyKeyDown) //When the player enters any letter that is not required
                 {
-                    isActive = false; 
                     texts[currentIndex].color = Color.red;
                     timeAnimator.SetBool("Pause", true);
 
