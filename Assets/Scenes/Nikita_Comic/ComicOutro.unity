@@ -828,6 +828,7 @@ MonoBehaviour:
   fadeOutSeconds: 6
   changeSceneSeconds: 8
   fadeIn: 1
+  sceneName: MainMenu
 --- !u!225 &1789619741
 CanvasGroup:
   m_ObjectHideFlags: 0

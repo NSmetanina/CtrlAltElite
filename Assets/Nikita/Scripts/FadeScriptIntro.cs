@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FadeScript : MonoBehaviour
+public class FadeScriptIntro : MonoBehaviour
 {
 
     public CanvasGroup canvasGroup;
     public float fadeDuration = 2.0f;
 
-    public float fadeOutSeconds = 9.0f;
-    public float changeSceneSeconds = 11.0f;
+    public float fadeOutSeconds;
+    public float changeSceneSeconds;
 
     public bool fadeIn = false;
 
-    //public string sceneName;
+    public string sceneName;
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class FadeScript : MonoBehaviour
         yield return new WaitForSeconds(fadeOutSeconds);
         FadeOut();
         yield return new WaitForSeconds(changeSceneSeconds);
-        //SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene(sceneName);
     }
 
     public void FadeIn()
