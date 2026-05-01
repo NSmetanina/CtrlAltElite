@@ -14,7 +14,7 @@ public class Pt4QteArray : MonoBehaviour
 
     public Animator timeAnimator;
     
-    private KeyCode[]qteSequence = {KeyCode.F, KeyCode.V, KeyCode.Z, KeyCode.J}; //The QTE array that also has the sequence of the QTE
+    private KeyCode[]qteSequence = {KeyCode.Q, KeyCode.M, KeyCode.T, KeyCode.K}; //The QTE array that also has the sequence of the QTE
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
