@@ -777,13 +777,14 @@ GameObject:
   m_Component:
   - component: {fileID: 67247816}
   - component: {fileID: 67247815}
+  - component: {fileID: 67247817}
   m_Layer: 0
   m_Name: WallClaw Hack UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!222 &67247815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -817,6 +818,27 @@ RectTransform:
   m_AnchoredPosition: {x: 49.86802, y: -116.09703}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &67247817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67247813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 343bbf5da20e19d4eb72506e5aafa354, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wallTriggerToHack: {fileID: 1587122433}
+  timer: 5
+  i: 0
+  texts:
+  - {fileID: 715295722}
+  - {fileID: 935422595}
+  - {fileID: 471733161}
+  - {fileID: 578249499}
+  timeAnimator: {fileID: 213002632}
 --- !u!1 &70972552
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,7 +888,7 @@ GameObject:
   - component: {fileID: 71821726}
   - component: {fileID: 71821730}
   m_Layer: 0
-  m_Name: ChangeToHackable to True
+  m_Name: ChangeToHackable to True p2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1712,7 +1734,7 @@ GameObject:
   - component: {fileID: 213002633}
   - component: {fileID: 213002632}
   m_Layer: 0
-  m_Name: Time Bar (elevator)
+  m_Name: Time Bar (WALL)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3261,7 +3283,7 @@ GameObject:
   - component: {fileID: 471733161}
   - component: {fileID: 471733160}
   m_Layer: 0
-  m_Name: C (elevator)
+  m_Name: Z(Wall)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3328,7 +3350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: C
+  m_text: Z
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d20bbfce6efd4d140a1f4b2f4c09ee6a, type: 2}
   m_sharedMaterial: {fileID: -8375997900423981533, guid: d20bbfce6efd4d140a1f4b2f4c09ee6a, type: 2}
@@ -3839,7 +3861,7 @@ GameObject:
   - component: {fileID: 578249499}
   - component: {fileID: 578249498}
   m_Layer: 0
-  m_Name: V (elevator)
+  m_Name: J(Wall)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3906,7 +3928,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: V
+  m_text: J
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d20bbfce6efd4d140a1f4b2f4c09ee6a, type: 2}
   m_sharedMaterial: {fileID: -8375997900423981533, guid: d20bbfce6efd4d140a1f4b2f4c09ee6a, type: 2}
@@ -4210,7 +4232,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1253877718}
   - {fileID: 67247816}
   m_Father: {fileID: 43469110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4234,7 +4255,9 @@ MonoBehaviour:
   fanAnimator: {fileID: 0}
   timer: 5
   texts: []
+  currentIndex: 0
   timeAnimator: {fileID: 0}
+  qteSequence: 7a000000780000006300000076000000
   triggerToHack: {fileID: 0}
 --- !u!114 &615907851
 MonoBehaviour:
@@ -4974,7 +4997,7 @@ GameObject:
   - component: {fileID: 715295722}
   - component: {fileID: 715295721}
   m_Layer: 0
-  m_Name: Z (elevator)
+  m_Name: F(Wall)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5041,7 +5064,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Z
+  m_text: F
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d20bbfce6efd4d140a1f4b2f4c09ee6a, type: 2}
   m_sharedMaterial: {fileID: -8375997900423981533, guid: d20bbfce6efd4d140a1f4b2f4c09ee6a, type: 2}
@@ -6603,14 +6626,14 @@ RectTransform:
   m_GameObject: {fileID: 869552648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 16.371338, y: 4.080386, z: 12.575923}
+  m_LocalScale: {x: 16.371338, y: 4.692444, z: 12.575923}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 67247816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93.00012, y: -107.99997}
+  m_AnchoredPosition: {x: -93.00012, y: -85}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &869552650
@@ -6633,7 +6656,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: dfa111042b895eb4e80060a281509b3f, type: 3}
+  m_Texture: {fileID: 2800000, guid: 2b36f552810eda04aa6e0534be578100, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -6792,7 +6815,9 @@ MonoBehaviour:
   fanAnimator: {fileID: 0}
   timer: 5
   texts: []
+  currentIndex: 0
   timeAnimator: {fileID: 0}
+  qteSequence: 7a000000780000006300000076000000
   triggerToHack: {fileID: 0}
 --- !u!114 &903274129
 MonoBehaviour:
@@ -7058,7 +7083,7 @@ GameObject:
   - component: {fileID: 935422595}
   - component: {fileID: 935422594}
   m_Layer: 0
-  m_Name: X (elevator)
+  m_Name: V(Wall)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7125,7 +7150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X
+  m_text: V
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d20bbfce6efd4d140a1f4b2f4c09ee6a, type: 2}
   m_sharedMaterial: {fileID: -8375997900423981533, guid: d20bbfce6efd4d140a1f4b2f4c09ee6a, type: 2}
@@ -9724,41 +9749,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253557784}
   m_Mesh: {fileID: -2691176642478272308, guid: 5a08cdb139f0b1e409ddd98632e41a8a, type: 3}
---- !u!1 &1253877717
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1253877718}
-  m_Layer: 0
-  m_Name: UI Script
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1253877718
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253877717}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 615907849}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1280120119
 GameObject:
   m_ObjectHideFlags: 0
@@ -11976,11 +11966,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1587122430}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 494a09c658e3df14f984dc1c1702c263, type: 3}
+  m_Script: {fileID: 11500000, guid: bfbbeb5290a7ce94a89b6f427dd6799a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AssembledPartThree: {fileID: 0}
-  circularTriggerToHack: {fileID: 0}
+  wallClaw: {fileID: 5357779556878463204}
+  HackMenu: {fileID: 67247813}
+  P3hackable: 0
+  P3hasBeenHacked: 0
 --- !u!1 &1597760759
 GameObject:
   m_ObjectHideFlags: 0
@@ -13938,14 +13930,14 @@ RectTransform:
   m_GameObject: {fileID: 1997089731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 16.371338, y: 4.080386, z: 12.575923}
+  m_LocalScale: {x: 16.371338, y: 4.597371, z: 12.575923}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 272698824}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -93.00012, y: -107.99997}
+  m_AnchoredPosition: {x: -93.00012, y: -84}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1997089733
@@ -13961,14 +13953,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.90588236}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.90588236}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: dfa111042b895eb4e80060a281509b3f, type: 3}
+  m_Texture: {fileID: 2800000, guid: 2b36f552810eda04aa6e0534be578100, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -21188,6 +21180,7 @@ GameObject:
   - component: {fileID: 4678671177701562296}
   - component: {fileID: 3899399455694439872}
   - component: {fileID: 749172471}
+  - component: {fileID: 5357779556878463204}
   m_Layer: 0
   m_Name: WallClawBase
   m_TagString: Untagged
@@ -26152,6 +26145,20 @@ Transform:
   - {fileID: 4830452173123750926}
   m_Father: {fileID: 543450652951056670}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5357779556878463204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321667789800317365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529b9ceea48522b439d417256fd793c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WallClawAnimator: {fileID: 749172471}
+  staticP3: {fileID: 5365195336918388730}
 --- !u!1 &5365195336918388730
 GameObject:
   m_ObjectHideFlags: 0
