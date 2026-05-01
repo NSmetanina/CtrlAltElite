@@ -7,6 +7,7 @@ public class WallTriggerToHack : MonoBehaviour
     public WallClaw wallClaw;
 
     public GameObject HackMenu;
+    public GameObject InRangeUi4;
 
     public bool P3hackable = false; //hackable if in objects collider
 
@@ -52,6 +53,14 @@ public class WallTriggerToHack : MonoBehaviour
 
                 }
             }
+            if(P3hackable == true)
+                    {
+                        InRangeUi4.SetActive(true);
+                    }
+                    else
+                    {
+                        InRangeUi4.SetActive(false);
+                    }
             
     }
 }

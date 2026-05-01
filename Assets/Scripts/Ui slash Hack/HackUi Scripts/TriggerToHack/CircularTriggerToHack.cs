@@ -7,6 +7,8 @@ public class CircularTriggerToHack : MonoBehaviour
     // public HackableObject hackableObject;
     public BombPartCollectorScript bombPartCollectorScript;
     public GameObject HackMenu;
+    public GameObject InRangeUi5;
+
     public HackableObject hackableObject;
     public CircularClaw circularClaw;
     public CircularPtTwoClaw circularPtTwoClaw;
@@ -76,6 +78,14 @@ public class CircularTriggerToHack : MonoBehaviour
                         }
 
                 }
+                if(hackable == true)
+                    {
+                        InRangeUi5.SetActive(true);
+                    }
+                    else
+                    {
+                        InRangeUi5.SetActive(false);
+                    }
             }
             
     }

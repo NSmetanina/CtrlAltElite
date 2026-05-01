@@ -11,11 +11,15 @@ public class CircularPtTwoClaw : MonoBehaviour
     // public GameObject assemblePiece;
     public GameObject originalP2;
     public GameObject assemblePiece2;
-    
+    public GameObject BoxColider;
+    public CircularTriggerToHack circularTriggerToHack;
+
     public void HackPtTwoBehaviour()
     {
         
         rotationAnim.SetTrigger("CenterRotate");
+        circularTriggerToHack.hackable = false;
+        BoxColider.SetActive(false);
         Debug.Log("Start waiting");
         StartCoroutine(WaitAnimationLength());
         StartCoroutine(WaitRotationAnimationLength());

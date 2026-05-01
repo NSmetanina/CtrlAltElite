@@ -6,12 +6,13 @@ public class HookTriggerToHack : MonoBehaviour
 {
     public HookClaw hookclaw;
 
+    WallTriggerToHack wallTriggerToHack;
+
     public GameObject HackMenu;
+    public GameObject InRangeUi1;
 
     public bool P4hackable = false; //hackable if in objects collider
-
     public bool P4hasBeenHacked; //If prev hacked one is made true
-   
 
     void Start()
     {
@@ -50,6 +51,14 @@ public class HookTriggerToHack : MonoBehaviour
                             hookclaw.HookBehaviour();
                         }
 
+                    if(P4hackable == true)
+                    {
+                       InRangeUi1.SetActive(true);
+                    }
+                    else
+                    {
+                       InRangeUi1.SetActive(false);
+                    }
                 }
             }
             

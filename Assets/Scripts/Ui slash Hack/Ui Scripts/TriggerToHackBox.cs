@@ -21,4 +21,5 @@ public class TriggerToHackBox : MonoBehaviour
                     circularTriggerToHack.hackable = false;
                     }
                 }
+                
 }

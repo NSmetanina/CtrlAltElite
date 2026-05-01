@@ -547,7 +547,6 @@ GameObject:
   - component: {fileID: 789760744}
   - component: {fileID: 789760743}
   - component: {fileID: 789760742}
-  - component: {fileID: 789760741}
   m_Layer: 5
   m_Name: Hack Canvas
   m_TagString: Untagged
@@ -555,28 +554,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &789760741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 789760740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fanAnimator: {fileID: 6425001111338261543}
-  timer: 5
-  texts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  timeAnimator: {fileID: 176437906}
-  triggerToHack: {fileID: 0}
 --- !u!114 &789760742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -784,6 +761,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &977057509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 977057510}
+  - component: {fileID: 977057512}
+  - component: {fileID: 977057511}
+  m_Layer: 0
+  m_Name: FanCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &977057510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977057509}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1374616045886664296}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &977057511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977057509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dea0b92da1ca1424c9aeb37d16bbca3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cube: {fileID: 977057512}
+  sceneName: AssemblyRoom
+--- !u!65 &977057512
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977057509}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.51177096, y: 0.59293, z: 0.07405294}
+  m_Center: {x: -0.018818408, y: 0.046083566, z: -0.026777111}
 --- !u!1 &1064530067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,7 +1639,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1974785438}
   - component: {fileID: 1974785440}
-  - component: {fileID: 1974785439}
   m_Layer: 0
   m_Name: Hack UI
   m_TagString: Untagged
@@ -1626,28 +1670,6 @@ RectTransform:
   m_AnchoredPosition: {x: 49.86802, y: -116.09703}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1974785439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1974785437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fanAnimator: {fileID: 0}
-  timer: 5
-  texts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  timeAnimator: {fileID: 176437906}
-  triggerToHack: {fileID: 0}
 --- !u!222 &1974785440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1925,11 +1947,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89fd97e5def79f145bb0360c493b8a05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ElevatorHackUi: {fileID: 0}
-  WallClawHackUi: {fileID: 0}
-  BombHookHackUi: {fileID: 0}
-  CircularHackUi: {fileID: 0}
-  FanHackUi: {fileID: 0}
+  ElevatorHackUi: {fileID: 1974785437}
+  WallClawHackUi: {fileID: 1974785437}
+  BombHookHackUi: {fileID: 1974785437}
+  CircularHackUi: {fileID: 1974785437}
+  FanHackUi: {fileID: 1974785437}
   Sprite_Forward: {fileID: 1815935596, guid: f37b75a0f041bf346a9baa1388152459, type: 3}
   Sprite_Right: {fileID: 394672385, guid: e0fb1e39e68c99246b03135788cd0589, type: 3}
   Sprite_Left: {fileID: -1208733515, guid: 495fb3932b95b9c43815a99bafb43bc6, type: 3}
@@ -2145,7 +2167,8 @@ Transform:
   m_LocalPosition: {x: -0.16856183, y: 0.4361377, z: -0.84858775}
   m_LocalScale: {x: 1.880425, y: 1.880425, z: 1.880425}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 977057510}
   m_Father: {fileID: 2504251139011100748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1433187905144183764

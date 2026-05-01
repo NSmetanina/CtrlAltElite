@@ -6,6 +6,8 @@ public class TriggerToHack : MonoBehaviour
 {
     // public HackableObject hackableObject;
     public GameObject HackMenu;
+    public GameObject InRangeUi2;
+
     public HackableObject hackableObject;
 
     bool hackable = false; //hackable if in objects collider
@@ -49,6 +51,14 @@ public class TriggerToHack : MonoBehaviour
                     }
 
             }
+             if(hackable == true)
+                    {
+                        InRangeUi2.SetActive(true);
+                    }
+                    else
+                    {
+                        InRangeUi2.SetActive(false);
+                    }
         }
         
 
