@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 7441830}
   - component: {fileID: 7441829}
   m_Layer: 0
-  m_Name: C (elevator)
+  m_Name: T (Hook)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -784,7 +784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!222 &67247815
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4212,7 +4212,6 @@ GameObject:
   - component: {fileID: 615907853}
   - component: {fileID: 615907852}
   - component: {fileID: 615907851}
-  - component: {fileID: 615907850}
   m_Layer: 5
   m_Name: WallClaw Canvas
   m_TagString: Untagged
@@ -4240,25 +4239,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &615907850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615907848}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fanAnimator: {fileID: 0}
-  timer: 5
-  texts: []
-  currentIndex: 0
-  timeAnimator: {fileID: 0}
-  qteSequence: 7a000000780000006300000076000000
-  triggerToHack: {fileID: 0}
 --- !u!114 &615907851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6771,7 +6751,6 @@ GameObject:
   - component: {fileID: 903274131}
   - component: {fileID: 903274130}
   - component: {fileID: 903274129}
-  - component: {fileID: 903274128}
   m_Layer: 5
   m_Name: BombHook Canvas
   m_TagString: Untagged
@@ -6791,7 +6770,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1248401308}
   - {fileID: 1177796987}
   m_Father: {fileID: 43469110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6800,25 +6778,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &903274128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 903274126}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5845b9b88a7c10047a2351f6a6dc95a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fanAnimator: {fileID: 0}
-  timer: 5
-  texts: []
-  currentIndex: 0
-  timeAnimator: {fileID: 0}
-  qteSequence: 7a000000780000006300000076000000
-  triggerToHack: {fileID: 0}
 --- !u!114 &903274129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8768,6 +8727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177796987}
   - component: {fileID: 1177796986}
+  - component: {fileID: 1177796988}
   m_Layer: 0
   m_Name: BombHook Hack UI
   m_TagString: Untagged
@@ -8808,6 +8768,27 @@ RectTransform:
   m_AnchoredPosition: {x: 49.86802, y: -116.09703}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1177796988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177796984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67f09d20f7a0e041ba130154d6e4e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hookTriggerToHack: {fileID: 1987337349}
+  timer: 5
+  i: 0
+  texts:
+  - {fileID: 1523925102}
+  - {fileID: 1434098547}
+  - {fileID: 7441830}
+  - {fileID: 1654624397}
+  timeAnimator: {fileID: 1508563271}
 --- !u!1 &1183165965
 GameObject:
   m_ObjectHideFlags: 0
@@ -9626,41 +9607,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237144020}
   m_Mesh: {fileID: -7153968106787905804, guid: 5a08cdb139f0b1e409ddd98632e41a8a, type: 3}
---- !u!1 &1248401307
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1248401308}
-  m_Layer: 0
-  m_Name: UI Script
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1248401308
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248401307}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 903274127}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1253557784
 GameObject:
   m_ObjectHideFlags: 0
@@ -10281,7 +10227,7 @@ GameObject:
   - component: {fileID: 1434098547}
   - component: {fileID: 1434098546}
   m_Layer: 0
-  m_Name: X (elevator)
+  m_Name: M (Hook)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11031,7 +10977,7 @@ GameObject:
   - component: {fileID: 1508563272}
   - component: {fileID: 1508563271}
   m_Layer: 0
-  m_Name: Time Bar (elevator)
+  m_Name: Time Bar (Hook)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11317,7 +11263,7 @@ GameObject:
   - component: {fileID: 1523925102}
   - component: {fileID: 1523925101}
   m_Layer: 0
-  m_Name: Z (elevator)
+  m_Name: Q (Hook)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12404,7 +12350,7 @@ GameObject:
   - component: {fileID: 1654624397}
   - component: {fileID: 1654624396}
   m_Layer: 0
-  m_Name: V (elevator)
+  m_Name: K (Hook)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13903,6 +13849,76 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965642634}
   m_Mesh: {fileID: 1952168876435874054, guid: 5a08cdb139f0b1e409ddd98632e41a8a, type: 3}
+--- !u!1 &1987337348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1987337351}
+  - component: {fileID: 1987337350}
+  - component: {fileID: 1987337349}
+  m_Layer: 0
+  m_Name: HookClawTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1987337349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987337348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b7167dd16cb9146a39c2019546ece8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hookclaw: {fileID: 0}
+  HackMenu: {fileID: 0}
+  P4hackable: 0
+  P4hasBeenHacked: 0
+--- !u!65 &1987337350
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987337348}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1987337351
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987337348}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 4.96, y: 0.137, z: -0.25699997}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1997089731
 GameObject:
   m_ObjectHideFlags: 0
@@ -25314,6 +25330,7 @@ GameObject:
   - component: {fileID: 4469603834994214506}
   - component: {fileID: 475690268634496824}
   - component: {fileID: 862087494}
+  - component: {fileID: 8261189915009930199}
   m_Layer: 0
   m_Name: -------PLAYER
   m_TagString: Untagged
@@ -26158,7 +26175,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WallClawAnimator: {fileID: 749172471}
+  centreClawAnim: {fileID: 5297589583253244115}
+  WaitingTime: 9.5
+  SecondWaitingTime: 5.45
+  assembledPartThree: {fileID: 1542789634}
   staticP3: {fileID: 5365195336918388730}
+  P3ani: {fileID: 154577238}
 --- !u!1 &5365195336918388730
 GameObject:
   m_ObjectHideFlags: 0
@@ -32256,6 +32278,29 @@ Transform:
   - {fileID: 2867499262565333532}
   m_Father: {fileID: 1913194201}
   m_LocalEulerAnglesHint: {x: -31.395, y: 60, z: 0}
+--- !u!136 &8261189915009930199
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4991683391716025542}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.21168229
+  m_Height: 0.42336458
+  m_Direction: 1
+  m_Center: {x: 0.0060581537, y: -0.30640155, z: 0.0056262775}
 --- !u!33 &8285620498179573896
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -34879,6 +34924,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1098162979}
   - {fileID: 1587122432}
+  - {fileID: 1987337351}
   - {fileID: 71821729}
   - {fileID: 1280120120}
   - {fileID: 543450652951056670}

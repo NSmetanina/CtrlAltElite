@@ -13,6 +13,7 @@ public class WallClaw : MonoBehaviour
 
     public GameObject assembledPartThree;
     public GameObject staticP3;
+    public GameObject P3ani;
     
     public void HackBehaviour() // gets called from wallTriggerToHack
     {
@@ -24,9 +25,10 @@ public class WallClaw : MonoBehaviour
 
      IEnumerator SecondPartClawAnim()    //enumerators can wait
     {
-
         yield return new WaitForSeconds(WaitingTime);//wait
-        centreClawAnim.SetTrigger("P2PickUp");
+        P3ani.SetActive(false);
+        centreClawAnim.SetBool("P3PickUp", true);//problem here
+        Debug.Log("Goes righrt hhere");
         yield return new WaitForSeconds(SecondWaitingTime);//wait
         assembledPartThree.SetActive(true);
     }
