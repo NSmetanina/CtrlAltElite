@@ -6,7 +6,8 @@ public class HookClaw : MonoBehaviour
 
     public Animator HookAnimator;
 
-
+    public GameObject CameraMain;
+    public GameObject CameraCutawayP4;
 
     public GameObject assembledPartFour;
     //public GameObject P3ani;
@@ -14,6 +15,8 @@ public class HookClaw : MonoBehaviour
     public void HookBehaviour() // gets called from wallTriggerToHack
     {
         HookAnimator.SetTrigger("P4ComeDown");
+        CameraCutawayP4.SetActive(true);
+        CameraMain.SetActive(false);
         StartCoroutine(P4Anim());
     }
 
@@ -22,5 +25,7 @@ public class HookClaw : MonoBehaviour
         yield return new WaitForSeconds(Time);//wait
          //P3ani.SetActive(false);
          assembledPartFour.SetActive(true);
+        CameraCutawayP4.SetActive(false);
+        CameraMain.SetActive(true);
     }
 }

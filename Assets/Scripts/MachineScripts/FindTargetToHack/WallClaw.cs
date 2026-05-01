@@ -14,11 +14,16 @@ public class WallClaw : MonoBehaviour
     public GameObject assembledPartThree;
     public GameObject staticP3;
     public GameObject P3ani;
+
+    public GameObject CameraMain;
+    public GameObject CameraCutawayP3;
     
     public void HackBehaviour() // gets called from wallTriggerToHack
     {
 
         staticP3.SetActive(false);
+        CameraCutawayP3.SetActive(true);
+        CameraMain.SetActive(false);
         WallClawAnimator.SetTrigger("MoveP3");
         StartCoroutine(SecondPartClawAnim());
     }
@@ -31,5 +36,7 @@ public class WallClaw : MonoBehaviour
         Debug.Log("Goes righrt hhere");
         yield return new WaitForSeconds(SecondWaitingTime);//wait
         assembledPartThree.SetActive(true);
+        CameraCutawayP3.SetActive(false);
+        CameraMain.SetActive(true);
     }
 }

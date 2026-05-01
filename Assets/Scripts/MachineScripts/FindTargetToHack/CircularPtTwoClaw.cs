@@ -14,9 +14,13 @@ public class CircularPtTwoClaw : MonoBehaviour
     public GameObject BoxColider;
     public CircularTriggerToHack circularTriggerToHack;
 
+    public GameObject CameraMain;
+    public GameObject CameraCutawayP2;
+
     public void HackPtTwoBehaviour()
     {
-        
+        CameraCutawayP2.SetActive(true);
+        CameraMain.SetActive(false);
         rotationAnim.SetTrigger("CenterRotate");
         circularTriggerToHack.hackable = false;
         BoxColider.SetActive(false);
@@ -35,6 +39,8 @@ public class CircularPtTwoClaw : MonoBehaviour
         originalP2.SetActive(false);
         yield return new WaitForSeconds(WaitForSecondPartAnimation);//wait
         assemblePiece2.SetActive(true);
+        CameraMain.SetActive(true);
+        CameraCutawayP2.SetActive(false);
         
                 //Start Camera Pan
     }
