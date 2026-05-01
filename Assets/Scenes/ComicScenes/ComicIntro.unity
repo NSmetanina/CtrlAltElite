@@ -894,7 +894,7 @@ MonoBehaviour:
   canvasGroup: {fileID: 1789619741}
   fadeDuration: 10
   fadeOutSeconds: 75
-  changeSceneSeconds: 3
+  changeSceneSeconds: 5
   fadeIn: 1
   sceneName: Airduct
 --- !u!225 &1789619741

@@ -3091,7 +3091,6 @@ GameObject:
   - component: {fileID: 1374616045886664296}
   - component: {fileID: 4121984361718298031}
   - component: {fileID: 6425001111338261542}
-  - component: {fileID: 6425001111338261543}
   m_Layer: 0
   m_Name: Fan
   m_TagString: Untagged
@@ -3162,28 +3161,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &6425001111338261543
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6260499930766347455}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0c891d72cdeb6bd4eaaddd0c7a59d3e0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &6525556588182767949
 Transform:
   m_ObjectHideFlags: 0
